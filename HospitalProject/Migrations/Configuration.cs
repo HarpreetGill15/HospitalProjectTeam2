@@ -5,14 +5,14 @@ namespace HospitalProject.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<HospitalProject.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<HospitalProject.Data.HospitalContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(HospitalProject.Models.ApplicationDbContext context)
+        protected override void Seed(HospitalProject.Data.HospitalContext context)
         {
             //  This method will be called after migrating to the latest version.
 

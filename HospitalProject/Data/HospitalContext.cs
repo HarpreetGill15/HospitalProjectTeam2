@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace HospitalProject.Data
+{
+    public class HospitalContext : DbContext
+    {
+        public HospitalContext() : base("name=HospitalContext")
+        {
+
+        }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Notifications> Notfications { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.NotificationTypes> NotificationTypes { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Feedbacks> Feedbacks { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.FeedbackTypes> FeedbackTypes { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Departments> Departments { get; set; }
+    }
+}

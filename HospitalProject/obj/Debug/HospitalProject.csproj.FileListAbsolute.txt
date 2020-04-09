@@ -210,3 +210,4 @@ C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalPr
 C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.pdb
 C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.Migrations.another.resources
 C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.csproj.GenerateResource.cache
+C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.Migrations.notificationsandfeedbacks.resources
