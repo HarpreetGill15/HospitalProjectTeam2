@@ -23,6 +23,5 @@ namespace HospitalProject.Models
         public string PCode { get; set; }
         //One donor can have many donations:
         public ICollection<Donation> Donations { get; set; }
-
     }
 }

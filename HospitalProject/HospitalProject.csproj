@@ -182,8 +182,17 @@
     <Compile Include="Migrations\202004090257143_notificationsandfeedbacks.Designer.cs">
       <DependentUpon>202004090257143_notificationsandfeedbacks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004092318488_AddBlog.cs" />
+    <Compile Include="Migrations\202004092318488_AddBlog.Designer.cs">
+      <DependentUpon>202004092318488_AddBlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004092325278_AddDonorDonation.cs" />
+    <Compile Include="Migrations\202004092325278_AddDonorDonation.Designer.cs">
+      <DependentUpon>202004092325278_AddDonorDonation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\Departments.cs" />
     <Compile Include="Models\Donation.cs" />
     <Compile Include="Models\Donor.cs" />
@@ -191,7 +200,6 @@
     <Compile Include="Models\FeedbackTypes.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\News.cs" />
     <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\NotificationTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -276,6 +284,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004090257143_notificationsandfeedbacks.resx">
       <DependentUpon>202004090257143_notificationsandfeedbacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004092318488_AddBlog.resx">
+      <DependentUpon>202004092318488_AddBlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004092325278_AddDonorDonation.resx">
+      <DependentUpon>202004092325278_AddDonorDonation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
