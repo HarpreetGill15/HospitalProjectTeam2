@@ -34,17 +34,17 @@
         <div class="main-menu container">
 
             <div class="nav nav-pills nav-fill">
-                <a class="nav-item nav-link href="#">HOME</a>
+                <a class="nav-item nav-link active"  href="#">HOME</a>
                 <a class="nav-item nav-link" href="#">ABOUT</a>
-                <a class="nav-item nav-link" href="#">PATIENTS</a>
-                <a class="nav-item nav-link" href="#">SERVICES</a>
+                <a class="nav-item nav-link" href="#">PATIENTS <i class="fa fa-angle-down"></i></a>
+                <a class="nav-item nav-link" href="#">SERVICES <i class="fa fa-angle-down"></i></a>
                 <a class="nav-item nav-link" href="#">CAREERS</a>
                 <a class="nav-item nav-link" href="#">CONTACT</a>
             </div>
 
         </div>
     </header>
-    <main>
+    <main class="container-fluid bg-light">
 
         @RenderBody()
     </main>
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <img class="img-fluid py-5" src="@Url.Content("~/Content/images/Logo.png")" alt="Logo Image">
-                    <p>The North Shore Health Network receives funding from the North East Local Health Integration Network.</p>
+                    <p>The Humber Shore Health Network receives funding from the North East Local Health Integration Network.</p>
                     <p> The opinions expressed in this publication do not necessarily represent the views of the North East Local Health Integration Network.</p>
                 </div>
                 <div class="col-md-3">
