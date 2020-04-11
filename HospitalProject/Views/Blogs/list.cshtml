@@ -4,24 +4,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<section class="container">
-    <h2 class="py-5">News Feed</h2>
 
-    <div class="container">
-        <div class="row">
-            @foreach (var blog in Model)
-            {
-                <div class="card mb-3">
-                    <a href="Show.cshtml">
-                        <img src="@blog.ImagePath" class="bd-placeholder-img card-img-top"  alt="Blog Image">
-                        <div class="card-body">
-                            <h5 class="card-title">@blog.Title</h5>
-                            <p class="card-text">@blog.Body</p>
-                            <p class="card-text"><small class="text-muted"></small></p>
-                        </div>
-                    </a>
-                </div>
-            }
-        </div>
+<h2>News Feed</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var blog in Model)
+        {
+            <div class="card mb-3">
+                <a href="Show.cshtml">
+                    <img src="@blog.ImagePath" class="bd-placeholder-img card-img-top"  alt="Blog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@blog.Title</h5>
+                        <p class="card-text">@blog.Body</p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                    </div>
+                </a>
+            </div>
+        }
     </div>
-</section>
+</div>

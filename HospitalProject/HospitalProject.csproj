@@ -213,7 +213,6 @@
   <ItemGroup>
     <Content Include="Content\images\banner.jpg" />
     <Content Include="Content\images\Logo.png" />
-    <Content Include="Content\images\Logo_Light.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

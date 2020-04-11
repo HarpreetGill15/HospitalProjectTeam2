@@ -1,24 +1,14 @@
 ﻿@{
-    ViewBag.Title = "Humber Shore Health Network";
+    ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <section class="banner">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="@Url.Content("~/Content/images/banner.jpg")" class="d-block w-100" alt="Slider Image">
-                    <div class="container">
-                        <div class="banner-caption">
-                            <img src="@Url.Content("~/Content/images/Logo_Light.png")" alt="">
-                            <h3 class="py-3 white-font">We need your help!</h3>
-                            <p>Donate today to the COVID-19 Relief Fund to help meet the emergency needs of your hospital.</p>
-                            <button class="btn btn-secondary-outline btn-cta" type="button" name="button">Sign In</button>
-                            <button class="btn btn-secondary btn-cta" type="button" name="button">Donate</button>
-                        </div>
-                    </div>
-                </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="@Url.Content("~/Content/images/banner.jpg")" class="d-block w-100" alt="Slider Image">
             </div>
         </div>
-    
+    </div>
 </section>

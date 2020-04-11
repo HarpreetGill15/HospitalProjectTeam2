@@ -1,16 +1,8 @@
 ﻿body {
     overflow-x: hidden;
-    font-size: 1.05rem;
 }
-p {
-    letter-spacing: .7px;
-}
-h1, h2, h3, h4, h5, h6 {
-    color: #5b5b5b;
-}
-.white-font {
-    color: #fff;
-}
+
+
 .container-fluid {
     width: 100vw;
     padding: 0;
@@ -19,38 +11,11 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
     background-color: #0b665d;
     border: 1px solid #0b665d;
-    color: #fff;
     border-radius: 0;
-}
-
-.btn-primary-outline {
-    border: 1px solid #0b665d;
-    color: #0b665d;
-    background: #fff;
 }
 
 .btn-primary:hover {
     border: 1px solid #0b665d;
-    color: #0b665d;
-    background: #fff;
-}
-
-.btn-secondary {
-    color: #0b665d;
-    background: #fff;
-}
-
-.btn-secondary:hover {
-    border: 1px solid #fff;
-    background: #0b665d;
-}
-
-.btn-secondary-outline {
-    border: 1px solid #fff;
-    color: #fff;
-}
-
-.btn-secondary-outline:hover {
     color: #0b665d;
     background: #fff;
 }
@@ -110,22 +75,4 @@ footer {
 .quick-link:hover {
     color: #0b665d;
     text-decoration: underline;
-}
-
-.btn {
-    border-radius: 0;
-}
-
-.btn-cta {
-    padding: 10px 40px;
-    font-size: 1.2rem;
-}
-.banner-caption {
-    width: 30vw;
-    color: #fff;
-    position: absolute;
-    top: 30%;
-}
-.fa-search {
-    color: #ccc;
 }
