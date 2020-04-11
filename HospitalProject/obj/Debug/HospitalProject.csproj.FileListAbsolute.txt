@@ -432,3 +432,7 @@ C:\Users\Arun\Desktop\Sem 2\Hospital Project\HospitalProject\obj\Debug\HospitalP
 C:\Users\Arun\Desktop\Sem 2\Hospital Project\HospitalProject\obj\Debug\HospitalProject.dll
 C:\Users\Arun\Desktop\Sem 2\Hospital Project\HospitalProject\obj\Debug\HospitalProject.pdb
 C:\Users\Arun\Desktop\Sem 2\Hospital Project\HospitalProject\obj\Debug\HospitalProject.csprojAssemblyReference.cache
+C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.Migrations.AddBlog.resources
+C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.Migrations.AddDonorDonation.resources
+C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.Migrations.AddJobApplication.resources
+C:\Users\harpr\source\repos\HospitalProject\HospitalProject\obj\Debug\HospitalProject.Migrations.AddJobApplication1.resources

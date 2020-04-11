@@ -12,7 +12,7 @@ namespace HospitalProject.Data
         {
 
         }
-        public System.Data.Entity.DbSet<HospitalProject.Models.Notifications> Notfications { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Notifications> Notifications { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.NotificationTypes> NotificationTypes { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Feedbacks> Feedbacks { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.FeedbackTypes> FeedbackTypes { get; set; }
