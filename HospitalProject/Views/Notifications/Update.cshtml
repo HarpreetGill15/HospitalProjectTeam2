@@ -1,0 +1,36 @@
+﻿@model HospitalProject.Models.ViewModels.UpdateNotification
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<form method="post" action="/Notifications/Update/@Model.Notfications.id">
+    <label>Headline</label>
+    <input type="text" name="headline" value="@Model.Notfications.headline" />
+    <label>Content</label>
+    <input type="text" name="content" value="@Model.Notfications.content" />
+    <label>type</label>
+    <select name="type">
+        @{
+            foreach (var type in Model.types)
+            {
+                <option value="@type.id">@type.name</option>
+            }
+        }
+    </select>
+    <label for="active">Set Active: </label>
+    @{
+        if (Model.Notfications.active == 1)
+        {
+            <input type="checkbox" value="1" name="active" id="active" checked="true" />
+        }
+        else
+        {
+            <input type="checkbox" value="1" name="active" id="active" />
+        }
+    }
+
+
+    <input type="submit" value="submit" />
+</form>
+

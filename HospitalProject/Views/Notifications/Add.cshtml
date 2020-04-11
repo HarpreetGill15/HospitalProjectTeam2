@@ -1,0 +1,27 @@
+﻿@model IEnumerable<HospitalProject.Models.NotificationTypes>
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+<form method="post" action="/Notifications/Add">
+    <label>Headline</label>
+    <input type="text" name="headline" />
+    <label>Content</label>
+    <input type="text" name="content" />
+    <label>type</label>
+    <select name="type">
+        @{
+            foreach (var type in Model)
+            {
+                <option value="@type.id">@type.name</option>
+            }
+        }
+    </select>
+    <label for="active">Set Active: </label>
+    <input type="checkbox" value="1" name="active" id="active" />
+    <input type="submit" value="submit" />
+</form>
+
