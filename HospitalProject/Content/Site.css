@@ -8,14 +8,50 @@
     padding: 0;
 }
 
+.btn {
+    border-radius: 0;
+}
+
+.btn-cta {
+    padding: 10px 40px;
+    font-size: 1.2rem;
+}
+
 .btn-primary {
     background-color: #0b665d;
     border: 1px solid #0b665d;
+    color: #fff;
     border-radius: 0;
+}
+
+.btn-primary-outline {
+    border: 1px solid #0b665d;
+    color: #0b665d;
+    background: #fff;
 }
 
 .btn-primary:hover {
     border: 1px solid #0b665d;
+    color: #0b665d;
+    background: #fff;
+}
+
+.btn-secondary {
+    color: #0b665d;
+    background: #fff;
+}
+
+.btn-secondary:hover {
+    border: 1px solid #fff;
+    background: #0b665d;
+}
+
+.btn-secondary-outline {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary-outline:hover {
     color: #0b665d;
     background: #fff;
 }
@@ -52,14 +88,17 @@ input {
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     background: #0b665d;
 }
-
 a {
     color: #5b5b5b;
 }
 
+    a:hover {
+        color: #0b665d;
+        text-decoration: underline;
+    }
+
 
 main {
-    height: 100vh;
 }
 .form-control:focus {
     color: #0b665d;
@@ -75,4 +114,47 @@ footer {
 .quick-link:hover {
     color: #0b665d;
     text-decoration: underline;
+}
+.btn-readmore {
+    background: #5b5b5b;
+    color: #fff;
+}
+
+.btn-readmore:hover {
+    background: #0b665d;
+    color: #fff;
+}
+
+.service {
+    border: 1px solid #898989;
+}
+
+.service img {
+    width: 270px;
+    height: 150px;
+    object-fit: cover;
+}
+
+    .service p {
+        width: 270px;
+        margin: 0 auto;
+        height: 150px;
+    }
+
+.news {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.news img {
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.banner-caption {
+    width: 30vw;
+    color: #fff;
+    position: absolute;
+    top: 30%;
 }

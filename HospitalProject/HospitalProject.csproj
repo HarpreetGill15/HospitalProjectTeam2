@@ -191,10 +191,6 @@
     <Compile Include="Migrations\202004092325278_AddDonorDonation.Designer.cs">
       <DependentUpon>202004092325278_AddDonorDonation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004102315213_RemoveDate.cs" />
-    <Compile Include="Migrations\202004102315213_RemoveDate.Designer.cs">
-      <DependentUpon>202004102315213_RemoveDate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Blog.cs" />
@@ -211,8 +207,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\abuse-report.jpg" />
     <Content Include="Content\images\banner.jpg" />
+    <Content Include="Content\images\emergency.jpg" />
+    <Content Include="Content\images\hospital-stay.jpg" />
     <Content Include="Content\images\Logo.png" />
+    <Content Include="Content\images\Logo_Light.png" />
+    <Content Include="Content\images\parking.jpg" />
+    <Content Include="Content\images\responsibilities.jpg" />
+    <Content Include="Content\images\tips-advice.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -292,9 +295,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004092325278_AddDonorDonation.resx">
       <DependentUpon>202004092325278_AddDonorDonation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004102315213_RemoveDate.resx">
-      <DependentUpon>202004102315213_RemoveDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
