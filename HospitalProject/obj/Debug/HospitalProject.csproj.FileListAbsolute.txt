@@ -321,3 +321,4 @@ C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj
 C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.pdb
 C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.AddBlog.resources
 C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.AddDonorDonation.resources
+C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.RemoveDate.resources

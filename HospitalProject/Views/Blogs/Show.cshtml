@@ -1,0 +1,17 @@
+﻿@model HospitalProject.Models.Blog
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+<hr/>
+<h4>Posted On: </h4>
+<hr/>
+<div>
+    <img src="@Model.ImagePath"/>
+</div>
+<p>@Model.Body</p>
+
+
+

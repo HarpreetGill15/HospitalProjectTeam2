@@ -1,24 +1,78 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    overflow-x: hidden;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+.container-fluid {
+    width: 100vw;
+    padding: 0;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.btn-primary {
+    background-color: #0b665d;
+    border: 1px solid #0b665d;
+    border-radius: 0;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.btn-primary:hover {
+    border: 1px solid #0b665d;
+    color: #0b665d;
+    background: #fff;
+}
+
+.notification {
+    color: #898989;
+}
+
+input {
+    border-radius: 0 !important;
+}
+
+.input-group-text {
+    background: #fff;
+    border-radius: 0;
+}
+
+.nav-item {
+    border-radius: 0 !important;
+    border: 1px solid #898989;
+    border-left-width: 0;
+    padding: 15px 0;
+}
+
+.main-menu .nav-item:first-child {
+    border-left-width: 1px;
+}
+
+.nav-item:hover {
+    background: #0b665d;
+    color: #fff;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background: #0b665d;
+}
+
+a {
+    color: #5b5b5b;
+}
+
+
+main {
+    height: 100vh;
+}
+.form-control:focus {
+    color: #0b665d;
+    background-color: #fff;
+    border-color: #0b665d82;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #0b665d54;
+}
+
+footer {
+    color: #5b5b5b;
+}
+.quick-link:hover {
+    color: #0b665d;
+    text-decoration: underline;
 }

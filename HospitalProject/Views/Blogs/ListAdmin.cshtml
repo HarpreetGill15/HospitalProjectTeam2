@@ -1,0 +1,37 @@
+﻿@model List<HospitalProject.Models.Blog>
+@{
+    ViewBag.Title = "Blogs - Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Blogs</h2>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th class="text-center" scope="col">#</th>
+        <th class="text-center" scope="col">Thumbnail</th>
+        <th class="text-center" scope="col">Title</th>
+        <th class="text-center" scope="col">Body</th>
+        <th class="text-center" scope="col" colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody class="my-5">
+    @foreach (var blog in Model)
+    {
+        <tr>
+
+            <th class="text-center" scope="row">@blog.Id</th>
+            <td class="img-thumbnail"><img src="https://picsum.photos/80/80"/></td>
+            <td class="text-center">@blog.Title</td>
+            @*Limit the number of characters in the body content to be displayed on the list *@
+            <td class="text-center">@blog.Body.Substring(0, 50) ...</td>
+   
+            <td class="text-center"><a href="" class="btn btn-primary">Update</a>
+                <a href="" class="btn btn-primary">Delete</a></td>
+
+        </tr>
+    }
+    </tbody>
+</table>
+

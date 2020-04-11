@@ -10,7 +10,8 @@ namespace HospitalProject.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Body { get; set; }
-        public DateTime DateCreated { get; set; }
+        //Current date of the system for the blog posts
+        //public DateTime DateCreated { get; set; } = DateTime.Now;
         public string ImagePath { get; set; }
     }
 }
