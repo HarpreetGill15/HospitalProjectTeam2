@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HospitalProject.Models.NotificationTypes>
+﻿@*@model IEnumerable<HospitalProject.Models.NotificationTypes>*@
 
 @{
     ViewBag.Title = "Add";
@@ -13,12 +13,13 @@
     <input type="text" name="content" />
     <label>type</label>
     <select name="type">
-        @{
+        <option value="1">Emergency</option>
+        @*@{
             foreach (var type in Model)
             {
                 <option value="@type.id">@type.name</option>
             }
-        }
+        }*@
     </select>
     <label for="active">Set Active: </label>
     <input type="checkbox" value="1" name="active" id="active" />

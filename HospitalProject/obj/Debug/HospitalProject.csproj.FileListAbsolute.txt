@@ -321,7 +321,6 @@ C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj
 C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.pdb
 C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.AddBlog.resources
 C:\Users\elmir_ij1t0f1\Desktop\Hospital\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.AddDonorDonation.resources
-C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.csprojAssemblyReference.cache
 C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.another.resources
 C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.notificationsandfeedbacks.resources
 C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.AddBlog.resources
@@ -432,3 +431,5 @@ C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\
 C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.csproj.CopyComplete
 C:\Users\harpr\Source\Repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.notifications.resources
+C:\Users\harpr\source\repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.csprojAssemblyReference.cache
+C:\Users\harpr\source\repos\HarpreetGill15\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.notnulltonotifications.resources

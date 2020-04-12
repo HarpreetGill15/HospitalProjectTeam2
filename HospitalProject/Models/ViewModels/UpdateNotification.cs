@@ -7,7 +7,7 @@ namespace HospitalProject.Models.ViewModels
 {
     public class UpdateNotification
     {
-        public virtual Notifications Notfications { get; set; }
+        public virtual Notifications Notifications { get; set; }
 
         public List<NotificationTypes> types { get; set; }
     }

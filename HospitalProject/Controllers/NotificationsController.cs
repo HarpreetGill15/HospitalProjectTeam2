@@ -47,14 +47,14 @@ namespace HospitalProject.Controllers
         {
             List<Notifications> notfications = db.Notifications.SqlQuery("select * from Notifications where active = 1").ToList();
 
-            return View(notfications);
+            return PartialView("ShowOnHome", notfications);
         }
         //add customer
         public ActionResult Add()
         {
-            List<NotificationTypes> types = db.NotificationTypes.SqlQuery("select * from NotificationTypes").ToList();
+            //List<NotificationTypes> types = db.NotificationTypes.SqlQuery("select * from NotificationTypes").ToList();
 
-            return View(types);
+            return View();
         }
         //add customer after post
         [HttpPost]
@@ -110,7 +110,7 @@ namespace HospitalProject.Controllers
 
             UpdateNotification update = new UpdateNotification();
 
-            update.Notfications = notification;
+            update.Notifications = notification;
             update.types = types;
 
 

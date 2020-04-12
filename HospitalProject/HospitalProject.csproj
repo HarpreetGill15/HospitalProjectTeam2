@@ -197,6 +197,10 @@
     <Compile Include="Migrations\202004120311506_notifications.Designer.cs">
       <DependentUpon>202004120311506_notifications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004122008241_notnulltonotifications.cs" />
+    <Compile Include="Migrations\202004122008241_notnulltonotifications.Designer.cs">
+      <DependentUpon>202004122008241_notnulltonotifications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Application.cs" />
@@ -316,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004120311506_notifications.resx">
       <DependentUpon>202004120311506_notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122008241_notnulltonotifications.resx">
+      <DependentUpon>202004122008241_notnulltonotifications.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

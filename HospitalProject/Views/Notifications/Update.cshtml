@@ -4,11 +4,11 @@
 }
 
 <h2>Update</h2>
-<form method="post" action="/Notifications/Update/@Model.Notfications.id">
+<form method="post" action="/Notifications/Update/@Model.Notifications.id">
     <label>Headline</label>
-    <input type="text" name="headline" value="@Model.Notfications.headline" />
+    <input type="text" name="headline" value="@Model.Notifications.headline" />
     <label>Content</label>
-    <input type="text" name="content" value="@Model.Notfications.content" />
+    <input type="text" name="content" value="@Model.Notifications.content" />
     <label>type</label>
     <select name="type">
         @{
@@ -20,7 +20,7 @@
     </select>
     <label for="active">Set Active: </label>
     @{
-        if (Model.Notfications.active == 1)
+        if (Model.Notifications.active == 1)
         {
             <input type="checkbox" value="1" name="active" id="active" checked="true" />
         }
