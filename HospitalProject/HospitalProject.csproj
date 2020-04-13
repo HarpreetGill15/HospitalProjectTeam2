@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\FeedbacksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\NotificationTypes.cs" />
+    <Compile Include="Models\ViewModels\UpdateFeedback.cs" />
     <Compile Include="Models\ViewModels\UpdateNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -399,6 +401,9 @@
     <Content Include="Views\Shared\_Notification.cshtml" />
     <Content Include="Views\Notifications\ShowOnHome.cshtml" />
     <Content Include="Views\Blogs\Add.cshtml" />
+    <Content Include="Views\Feedbacks\List.cshtml" />
+    <Content Include="Views\Feedbacks\Add.cshtml" />
+    <Content Include="Views\Feedbacks\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
