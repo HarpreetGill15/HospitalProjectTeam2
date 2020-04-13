@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
+using System.Data.SqlClient;
+using System.Data.Entity;
+using System.Diagnostics;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
 using HospitalProject.Data;
 using HospitalProject.Models;
 
@@ -31,8 +33,7 @@ namespace HospitalProject.Controllers
                 //check the keyword in various columns (Title, Body, Date)
                 List<Blog> blogs = db.Blogs.Where(blog =>
                         blog.Title.Contains(searchkey) ||
-                        blog.Body.Contains(searchkey)
-                        ).ToList();
+                        blog.Body.Contains(searchkey)).ToList();
                 return View(blogs);
             }//if not show the list of all blogs
             else
@@ -66,7 +67,27 @@ namespace HospitalProject.Controllers
             return View(selectedBlog);
         }
 
+        //Add action for the GET request to show the page
+        //GET: Blogs/Add
+        public ActionResult Add()
+        {
+            return View();
+        }
 
+        //add function: A post request to submit the form
+        [HttpPost]
+        //model binding
+        public ActionResult Add(Blog blog)
+        {
+            Debug.WriteLine(blog);
+            //add the blog to the dbcontext :not the database but to the memory 
+            db.Blogs.Add(blog);
+            //add to the database
+            db.SaveChanges();
+            //go back to the list of Blogs in Admin view
+            return RedirectToAction("ListAdmin");
+        }
+      
 
 
         

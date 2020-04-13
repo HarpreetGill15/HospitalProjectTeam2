@@ -177,29 +177,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004042241015_another.cs" />
-    <Compile Include="Migrations\202004042241015_another.Designer.cs">
-      <DependentUpon>202004042241015_another.cs</DependentUpon>
+    <Compile Include="Migrations\202004130419006_Blog.cs" />
+    <Compile Include="Migrations\202004130419006_Blog.Designer.cs">
+      <DependentUpon>202004130419006_Blog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004090257143_notificationsandfeedbacks.cs" />
-    <Compile Include="Migrations\202004090257143_notificationsandfeedbacks.Designer.cs">
-      <DependentUpon>202004090257143_notificationsandfeedbacks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004092318488_AddBlog.cs" />
-    <Compile Include="Migrations\202004092318488_AddBlog.Designer.cs">
-      <DependentUpon>202004092318488_AddBlog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004092325278_AddDonorDonation.cs" />
-    <Compile Include="Migrations\202004092325278_AddDonorDonation.Designer.cs">
-      <DependentUpon>202004092325278_AddDonorDonation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004120311506_notifications.cs" />
-    <Compile Include="Migrations\202004120311506_notifications.Designer.cs">
-      <DependentUpon>202004120311506_notifications.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004122008241_notnulltonotifications.cs" />
-    <Compile Include="Migrations\202004122008241_notnulltonotifications.Designer.cs">
-      <DependentUpon>202004122008241_notnulltonotifications.cs</DependentUpon>
+    <Compile Include="Migrations\202004130424181_AddBlog.cs" />
+    <Compile Include="Migrations\202004130424181_AddBlog.Designer.cs">
+      <DependentUpon>202004130424181_AddBlog.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -292,6 +276,7 @@
     <Content Include="Views\Notifications\Update.cshtml" />
     <Content Include="Views\Shared\_Notification.cshtml" />
     <Content Include="Views\Notifications\ShowOnHome.cshtml" />
+    <Content Include="Views\Blogs\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -306,23 +291,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004042241015_another.resx">
-      <DependentUpon>202004042241015_another.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004130419006_Blog.resx">
+      <DependentUpon>202004130419006_Blog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004090257143_notificationsandfeedbacks.resx">
-      <DependentUpon>202004090257143_notificationsandfeedbacks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004092318488_AddBlog.resx">
-      <DependentUpon>202004092318488_AddBlog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004092325278_AddDonorDonation.resx">
-      <DependentUpon>202004092325278_AddDonorDonation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004120311506_notifications.resx">
-      <DependentUpon>202004120311506_notifications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004122008241_notnulltonotifications.resx">
-      <DependentUpon>202004122008241_notnulltonotifications.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004130424181_AddBlog.resx">
+      <DependentUpon>202004130424181_AddBlog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

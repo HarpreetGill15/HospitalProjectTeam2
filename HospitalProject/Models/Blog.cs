@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -9,9 +10,7 @@ namespace HospitalProject.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Body { get; set; }
-        //Current date of the system for the blog posts
-        //public DateTime DateCreated { get; set; } = DateTime.Now;
-        public string ImagePath { get; set; }
+        public string  Body { get; set; }
+        public string Image { get; set; }
     }
 }

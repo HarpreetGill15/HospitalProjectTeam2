@@ -3,9 +3,14 @@ namespace HospitalProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddBlog : DbMigration
+    public partial class Blog : DbMigration
     {
         public override void Up()
+        {
+            DropTable("dbo.Blogs");
+        }
+        
+        public override void Down()
         {
             CreateTable(
                 "dbo.Blogs",
@@ -14,16 +19,10 @@ namespace HospitalProject.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(),
                         Body = c.String(),
-                        DateCreated = c.DateTime(nullable: false),
                         ImagePath = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
-        }
-        
-        public override void Down()
-        {
-            DropTable("dbo.Blogs");
         }
     }
 }
