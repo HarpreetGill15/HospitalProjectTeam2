@@ -3,40 +3,41 @@
     ViewBag.Title = "ShowJob";
 }
 
-    <section class="container py-5">
+<section class="container py-5">
 
-        <h2>ShowJob</h2>
+    <h2>ShowJob</h2>
 
-        <h2>Job Details</h2>
-        @*Below code will display details about the Job.*@
-        <div class="row">
-            <div class="col-sm">
-                <div class="form-group">
-                    <div class="form-group row">
-                        <span>Name:</span>
-                        <span>@Model.name</span>
-                    </div>
-                    <div class="form-group row">
-                        <span>Skill:</span>
-                        <span>@Model.skill</span>
-                    </div>
-                    <div class="form-group row">
-                        <span>description:</span>
-                        <span>@Model.description</span>
-                    </div>
-                    <div class="form-group row">
-                        <span>Description:</span>
-                        <span>@Model.type</span>
-                    </div>
-                    <div class="form-group row">
-                        <span>Salary:</span>
-                        <span>@Model.salary</span>
-                    </div>
+    <h2>Job Details</h2>
+    @*Below code will display details about the Job.*@
+    <div class="row">
+        <div class="col-sm">
+            <div class="form-group">
+                <div class="form-group row">
+                    <span>Name:</span>
+                    <span>@Model.name</span>
                 </div>
-                @*Link styled as buttons to go back to the list page, Update the details and to delete the record*@
-                <a href="/Job/JobList/" class="btn btn-default">Back</a>
-                <a href="/Job/UpdateJob/@Model.jobId" class="btn btn-warning">Update</a>
-                <a href="/Job/DeleteJob/@Model.jobId" onclick="return validate();" class="btn btn-danger">Delete</a>
+                <div class="form-group row">
+                    <span>Skill:</span>
+                    <span>@Model.skill</span>
+                </div>
+                <div class="form-group row">
+                    <span>description:</span>
+                    <span>@Model.description</span>
+                </div>
+                <div class="form-group row">
+                    <span>Description:</span>
+                    <span>@Model.type</span>
+                </div>
+                <div class="form-group row">
+                    <span>Salary:</span>
+                    <span>@Model.salary</span>
+                </div>
             </div>
+            @*Link styled as buttons to go back to the list page, Update the details and to delete the record*@
+            <a href="/Job/JobList/" class="btn btn-default">Back</a>
+            <a href="/Job/UpdateJob/@Model.jobId" class="btn btn-warning">Update</a>
+            <a href="/Job/DeleteJob/@Model.jobId" onclick="return validate();" class="btn btn-danger">Delete</a>
         </div>
+    </div>
 </section>
+<hr/>

@@ -87,9 +87,27 @@ namespace HospitalProject.Controllers
             //go back to the list of Blogs in Admin view
             return RedirectToAction("ListAdmin");
         }
-      
+
+        //Get request for the confirmation page
+        public ActionResult ConfirmDelete(int id)
+        {
+            Blog selectedBlog = db.Blogs.Find(id);
+            return View(selectedBlog);
+        }
+        //Post request to delete the blog
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            Blog selectedBlog = db.Blogs.Find(id);
+
+            //remove from the dbcontext
+            db.Blogs.Remove(selectedBlog);
+            //delete from the actual database
+            db.SaveChanges();
+            return RedirectToAction("ListAdmin");
+        }
 
 
-        
+
     }
 }

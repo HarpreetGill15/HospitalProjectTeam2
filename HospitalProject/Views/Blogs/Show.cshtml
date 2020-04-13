@@ -4,12 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Title</h2>
+<section class="container py-5">
+    <h2 class="text-center text-secondary">@Model.Title</h2>
+    <hr/>
 
-<div>
-    <img src="@Model.Image"/>
-</div>
-<p>@Model.Body</p>
+    <div>
+        <img src="@Model.Image"/>
+    </div>
+    <p>@Model.Body</p>
 
 
-
+</section>
+<hr />

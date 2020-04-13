@@ -404,6 +404,7 @@
     <Content Include="Views\Feedbacks\List.cshtml" />
     <Content Include="Views\Feedbacks\Add.cshtml" />
     <Content Include="Views\Feedbacks\Update.cshtml" />
+    <Content Include="Views\Blogs\ConfirmDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
