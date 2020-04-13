@@ -52,9 +52,9 @@ namespace HospitalProject.Controllers
         //add customer
         public ActionResult Add()
         {
-            //List<NotificationTypes> types = db.NotificationTypes.SqlQuery("select * from NotificationTypes").ToList();
+            List<NotificationTypes> types = db.NotificationTypes.SqlQuery("select * from NotificationTypes").ToList();
 
-            return View();
+            return View(types);
         }
         //add customer after post
         [HttpPost]
