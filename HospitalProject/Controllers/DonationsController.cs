@@ -111,20 +111,27 @@ namespace HospitalProject.Controllers
         [HttpPost]
         public ActionResult Update(Donation donation)
         {
-            var selectedDonation = db.Donations.Single(d=> d.Id == donation.Id);
+            var selectedDonation = db.Donations.Single(d => d.Id == donation.Id);
 
-            selectedDonation.Amount = donation.Amount;
-            selectedDonation.FirstName = donation.FirstName;
-            selectedDonation.LastName = donation.LastName;
-            selectedDonation.Email = donation.Email;
-            selectedDonation.Phone = donation.Phone;
-            selectedDonation.City = donation.City;
-            selectedDonation.ZipCode = donation.ZipCode;
-            selectedDonation.DesignationId = donation.DesignationId;
-            selectedDonation.ProvinceId = donation.ProvinceId;
+            if (donation.Id == 0)
+            {
+                db.Donations.Add(donation);
+            }
+            else
+            {
+                selectedDonation.Amount = donation.Amount;
+                selectedDonation.FirstName = donation.FirstName;
+                selectedDonation.LastName = donation.LastName;
+                selectedDonation.Email = donation.Email;
+                selectedDonation.Phone = donation.Phone;
+                selectedDonation.City = donation.City;
+                selectedDonation.ZipCode = donation.ZipCode;
+                selectedDonation.DesignationId = donation.DesignationId;
+                selectedDonation.ProvinceId = donation.ProvinceId;
+            }
             //change the db
             db.SaveChanges();
-            return RedirectToAction("Show");
+            return RedirectToAction("List");
         }
 
 
