@@ -6,7 +6,7 @@ using System.Web;
 
 namespace HospitalProject.Models.ViewModels
 {
-    public class NewDonationViewModel : IEnumerable
+    public class NewDonationViewModel 
     {
         //A list of provinces to be used in the donations class
         public List<Province> Provinces { get; set; }
@@ -14,9 +14,6 @@ namespace HospitalProject.Models.ViewModels
         public List<Designation> Designations { get; set; }
         //All the properties of the donation (not one by one FirstName, ....)
         public Donation Donation { get; set; }
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+  
     }
 }

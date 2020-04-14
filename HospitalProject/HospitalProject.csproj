@@ -425,6 +425,7 @@
     <Content Include="Views\Patients\List.cshtml" />
     <Content Include="Views\Donations\Show.cshtml" />
     <Content Include="Views\Donations\ConfirmDelete.cshtml" />
+    <Content Include="Views\Donations\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

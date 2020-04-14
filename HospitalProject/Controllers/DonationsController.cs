@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Core.Common.EntitySql;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -89,6 +90,44 @@ namespace HospitalProject.Controllers
             db.SaveChanges();
             return RedirectToAction("List");
         }
+
+        //Get request to get the page of the selected donation
+        //URL: Donations/Update/1
+        public ActionResult Update(int id)
+        {
+            //find the donation in the db
+            var donation = db.Donations.SingleOrDefault(d => d.Id == id);
+            //set the viewModel for the update page: Display foreign keys(Provinces , Designations)
+            var viewModel = new NewDonationViewModel
+            {
+                Donation = donation,
+                Designations = db.Designations.ToList(),
+                Provinces = db.Provinces.ToList()
+            };
+            //display the update donation page
+            return View("Update", viewModel);
+        }
+        //Post request for the update action
+        [HttpPost]
+        public ActionResult Update(Donation donation)
+        {
+            var selectedDonation = db.Donations.Single(d=> d.Id == donation.Id);
+
+            selectedDonation.Amount = donation.Amount;
+            selectedDonation.FirstName = donation.FirstName;
+            selectedDonation.LastName = donation.LastName;
+            selectedDonation.Email = donation.Email;
+            selectedDonation.Phone = donation.Phone;
+            selectedDonation.City = donation.City;
+            selectedDonation.ZipCode = donation.ZipCode;
+            selectedDonation.DesignationId = donation.DesignationId;
+            selectedDonation.ProvinceId = donation.ProvinceId;
+            //change the db
+            db.SaveChanges();
+            return RedirectToAction("Show");
+        }
+
+
 
     }
 }
