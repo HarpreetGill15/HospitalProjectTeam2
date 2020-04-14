@@ -191,6 +191,10 @@
     <Compile Include="Migrations\202004140710485_pending.Designer.cs">
       <DependentUpon>202004140710485_pending.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004141221200_ChangeZipcodeType.cs" />
+    <Compile Include="Migrations\202004141221200_ChangeZipcodeType.Designer.cs">
+      <DependentUpon>202004141221200_ChangeZipcodeType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Application.cs" />
@@ -426,6 +430,7 @@
     <Content Include="Views\Donations\Show.cshtml" />
     <Content Include="Views\Donations\ConfirmDelete.cshtml" />
     <Content Include="Views\Donations\Update.cshtml" />
+    <Content Include="Views\Donations\Message.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -447,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004140710485_pending.resx">
       <DependentUpon>202004140710485_pending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004141221200_ChangeZipcodeType.resx">
+      <DependentUpon>202004141221200_ChangeZipcodeType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

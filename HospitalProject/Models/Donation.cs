@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HospitalProject.Models
 {
-    public class Donation : IEnumerable
+    public class Donation 
     {
         //donations information:
         //it stores the information of the donor and the amount as the gift
@@ -35,11 +35,8 @@ namespace HospitalProject.Models
         public Province Province { get; set; }
 
         public string City { get; set; }
-        public int ZipCode { get; set; }
+        public string ZipCode { get; set; }
 
-        public IEnumerator GetEnumerator()
-        {
-            throw new System.NotImplementedException();
-        }
+
     }
 }

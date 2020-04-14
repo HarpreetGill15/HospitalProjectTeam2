@@ -15,16 +15,11 @@
         @using (Html.BeginForm("Update", "Donations"))
         {
 
-            <div class="form-group">
                 @*This form is similar to Add Donation but this form has the values of the selected donation that needs editing*@
-                @Html.LabelFor(d => d.Donation.Amount, new { @class = "font-weight-bold text-secondary" })
-                <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">$</div>
-                    </div>
-                    @Html.TextBoxFor(d => d.Donation.Amount, new { Value = Model.Donation.Amount, @class = "form-control" })
-                </div>
-            </div>
+            //This does not make any sense to change the amount that has been paid as the gift,so amount is not
+            //changeable but other inormations regarding the donor can be modified
+            <p class="font-weight-bold text-secondary">Amount</p>
+            <p>$@Model.Donation.Amount</p>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     @*text input for the first name of the donor with the label*@
@@ -81,7 +76,9 @@
 
                 @Html.DropDownListFor(d => d.Donation.DesignationId, new SelectList(Model.Designations, "Id", "Title"), new { Value = Model.Donation.Designation, @class = "form-control" })
             </div>
-
+            //a hidden field to get the id from the form
+            //https://entityframework.net/knowledge-base/39405527/how-can-i-pass-hidden-field-value-from-view-to-controller-asp-net-mvc-5
+            @Html.HiddenFor(d=>d.Donation.Id);
             <button type="submit" class="btn btn-primary">Save</button>
             <a class="btn btn-secondary" href="/Donations/Show/@Model.Donation.Id">Cancel</a>
 

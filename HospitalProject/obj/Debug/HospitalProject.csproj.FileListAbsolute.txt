@@ -752,3 +752,4 @@ C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\bin\Mi
 C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.csproj.CopyComplete
 C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.FixErrors.resources
 C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.pending.resources
+C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.ChangeZipcodeType.resources

@@ -61,7 +61,7 @@ namespace HospitalProject.Controllers
             //to save the changes in the actual db
             db.SaveChanges();
             //redirect to the home page
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Message");
         }
 
         //Get request: url -> Donations/Show/1
@@ -81,11 +81,12 @@ namespace HospitalProject.Controllers
 
         //post request to delete the record for donation
         [HttpPost]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(Donation donation)
         {
-            Donation donation = db.Donations.Find();
+            //find the donation having to be deleted
+            var selectedDonation = db.Donations.SingleOrDefault(d => d.Id == donation.Id);
             //remove from the dbcontext
-            db.Donations.Remove(donation);
+            db.Donations.Remove(selectedDonation);
             //delete from the actual database
             db.SaveChanges();
             return RedirectToAction("List");
@@ -109,31 +110,35 @@ namespace HospitalProject.Controllers
         }
         //Post request for the update action
         [HttpPost]
+        //instead of specifying all the properties one by one, specify the donation object which
+        //contains all of the properties
         public ActionResult Update(Donation donation)
         {
-            var selectedDonation = db.Donations.Single(d => d.Id == donation.Id);
+            //get the page by its Id,
+            //Because we don't get any id from the form, and here we just rely on the Id,
+            //a hidden field would be a good idea to trigger the Id of the donation when updating
+            //hidden field is on the view update page
+            var targetDonation = db.Donations.Single(d => d.Id == donation.Id);
+            //set the values of the object to the ones coming from the form
+                targetDonation.FirstName = donation.FirstName;
+                targetDonation.LastName = donation.LastName;
+                targetDonation.Email = donation.Email;
+                targetDonation.Phone = donation.Phone;
+                targetDonation.City = donation.City;
+                targetDonation.ZipCode = donation.ZipCode;
+                targetDonation.DesignationId = donation.DesignationId;
+                targetDonation.ProvinceId = donation.ProvinceId;
 
-            if (donation.Id == 0)
-            {
-                db.Donations.Add(donation);
-            }
-            else
-            {
-                selectedDonation.Amount = donation.Amount;
-                selectedDonation.FirstName = donation.FirstName;
-                selectedDonation.LastName = donation.LastName;
-                selectedDonation.Email = donation.Email;
-                selectedDonation.Phone = donation.Phone;
-                selectedDonation.City = donation.City;
-                selectedDonation.ZipCode = donation.ZipCode;
-                selectedDonation.DesignationId = donation.DesignationId;
-                selectedDonation.ProvinceId = donation.ProvinceId;
-            }
             //change the db
             db.SaveChanges();
             return RedirectToAction("List");
         }
 
+        //get request for a thank you message page
+        public ActionResult Message()
+        {
+            return View();
+        }
 
 
     }
