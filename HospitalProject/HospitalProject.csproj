@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\DonationsController.cs" />
     <Compile Include="Controllers\FeedbacksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
@@ -182,13 +183,17 @@
     <Compile Include="Migrations\202004131538025_noti.Designer.cs">
       <DependentUpon>202004131538025_noti.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004140332542_ChangeDonationTable.cs" />
+    <Compile Include="Migrations\202004140332542_ChangeDonationTable.Designer.cs">
+      <DependentUpon>202004140332542_ChangeDonationTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\Departments.cs" />
+    <Compile Include="Models\Designation.cs" />
     <Compile Include="Models\Donation.cs" />
-    <Compile Include="Models\Donor.cs" />
     <Compile Include="Models\Feedbacks.cs" />
     <Compile Include="Models\FeedbackTypes.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -196,6 +201,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\NotificationTypes.cs" />
+    <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\ViewModels\NewDonationViewModel.cs" />
     <Compile Include="Models\ViewModels\UpdateFeedback.cs" />
     <Compile Include="Models\ViewModels\UpdateNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -406,6 +413,8 @@
     <Content Include="Views\Feedbacks\Update.cshtml" />
     <Content Include="Views\Blogs\ConfirmDelete.cshtml" />
     <Content Include="Views\Blogs\Update.cshtml" />
+    <Content Include="Views\Donations\List.cshtml" />
+    <Content Include="Views\Donations\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -421,6 +430,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004131538025_noti.resx">
       <DependentUpon>202004131538025_noti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004140332542_ChangeDonationTable.resx">
+      <DependentUpon>202004140332542_ChangeDonationTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

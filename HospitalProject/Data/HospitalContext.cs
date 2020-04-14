@@ -18,8 +18,10 @@ namespace HospitalProject.Data
         public System.Data.Entity.DbSet<HospitalProject.Models.FeedbackTypes> FeedbackTypes { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Departments> Departments { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Blog> Blogs { get; set; }
-        public System.Data.Entity.DbSet<HospitalProject.Models.Donor> Donors { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Donation> Donations { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Designation> Designations { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Province> Provinces { get; set; }
+
         public System.Data.Entity.DbSet<HospitalProject.Models.Job> Jobs { get; set; }
 
     }

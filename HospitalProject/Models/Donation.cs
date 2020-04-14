@@ -6,14 +6,38 @@ namespace HospitalProject.Models
     public class Donation
     {
         //donations information:
-        //id, amount of money as donation, donor id -> who has done it
+        //it stores the information of the donor and the amount as the gift
+        //Province and Designations are from different tables
         [Key]
-        public int DonationId { get; set; }
-        //the unit for this amount is CENTS
+        public int Id { get; set; }
         public int Amount { get; set; }
-        //foreign key (representing the one to many relationship: One Donor to many Donations
-        public int DonorId { get; set; }
-        [ForeignKey("DonorId")]
-        public virtual Donor Donor { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string Email { get; set; }
+
+        public string Phone { get; set; }
+
+        //Label in the form:
+        [Display(Name = "Fund Allocation")]
+        //foreign key (representing the one to many relationship: One designation to many Donations)
+        public int DesignationId { get; set; }
+        [ForeignKey("Id")]
+        public virtual Designation Designation { get; set; }
+
+
+        //To get the label as Province in the form
+        [Display (Name = "Province")]
+        //foreign key (representing the one to many relationship: One province to many Donations)
+        public int ProvinceId { get; set; }
+        [ForeignKey("Id")]
+
+        public virtual Province Province { get; set; }
+
+        public string City { get; set; }
+        public  int ZipCode { get; set; }
+
     }
 }
