@@ -11,8 +11,5 @@ namespace HospitalProject.Models
         [Key]
         public int Id { get; set; }
         public string Title { get; set; }
-        //One to many relationship in: one designation can include many donations
-        public ICollection<Donation> Donations { get; set; }
-
     }
 }

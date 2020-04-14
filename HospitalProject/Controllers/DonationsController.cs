@@ -55,7 +55,8 @@ namespace HospitalProject.Controllers
             db.Donations.Add(donation);
             //to save the changes in the actual db
             db.SaveChanges();
-            return RedirectToAction("List");
+            //redirect to the home page
+            return RedirectToAction("Index", "Home");
         }
     }
 }

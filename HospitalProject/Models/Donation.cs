@@ -24,20 +24,17 @@ namespace HospitalProject.Models
         [Display(Name = "Fund Allocation")]
         //foreign key (representing the one to many relationship: One designation to many Donations)
         public int DesignationId { get; set; }
-        [ForeignKey("Id")]
-        public virtual Designation Designation { get; set; }
+        public Designation Designation { get; set; }
 
 
         //To get the label as Province in the form
-        [Display (Name = "Province")]
+        [Display(Name = "Province")]
         //foreign key (representing the one to many relationship: One province to many Donations)
         public int ProvinceId { get; set; }
-        [ForeignKey("Id")]
-
-        public virtual Province Province { get; set; }
+        public Province Province { get; set; }
 
         public string City { get; set; }
-        public  int ZipCode { get; set; }
+        public int ZipCode { get; set; }
 
     }
 }

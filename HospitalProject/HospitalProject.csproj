@@ -183,9 +183,13 @@
     <Compile Include="Migrations\202004131538025_noti.Designer.cs">
       <DependentUpon>202004131538025_noti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004140332542_ChangeDonationTable.cs" />
-    <Compile Include="Migrations\202004140332542_ChangeDonationTable.Designer.cs">
-      <DependentUpon>202004140332542_ChangeDonationTable.cs</DependentUpon>
+    <Compile Include="Migrations\202004140704397_FixErrors.cs" />
+    <Compile Include="Migrations\202004140704397_FixErrors.Designer.cs">
+      <DependentUpon>202004140704397_FixErrors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004140710485_pending.cs" />
+    <Compile Include="Migrations\202004140710485_pending.Designer.cs">
+      <DependentUpon>202004140710485_pending.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -415,6 +419,10 @@
     <Content Include="Views\Blogs\Update.cshtml" />
     <Content Include="Views\Donations\List.cshtml" />
     <Content Include="Views\Donations\Add.cshtml" />
+    <Content Include="Views\Departments\List.cshtml" />
+    <Content Include="Views\Departments\Show.cshtml" />
+    <Content Include="Views\Departments\Update.cshtml" />
+    <Content Include="Views\Patients\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -431,8 +439,11 @@
     <EmbeddedResource Include="Migrations\202004131538025_noti.resx">
       <DependentUpon>202004131538025_noti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004140332542_ChangeDonationTable.resx">
-      <DependentUpon>202004140332542_ChangeDonationTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004140704397_FixErrors.resx">
+      <DependentUpon>202004140704397_FixErrors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004140710485_pending.resx">
+      <DependentUpon>202004140710485_pending.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

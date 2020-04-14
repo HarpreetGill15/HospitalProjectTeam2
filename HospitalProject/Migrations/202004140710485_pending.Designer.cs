@@ -7,13 +7,13 @@ namespace HospitalProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class ChangeDonationTable : IMigrationMetadata
+    public sealed partial class pending : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangeDonationTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(pending));
         
         string IMigrationMetadata.Id
         {
-            get { return "202004140332542_ChangeDonationTable"; }
+            get { return "202004140710485_pending"; }
         }
         
         string IMigrationMetadata.Source
