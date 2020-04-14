@@ -106,7 +106,28 @@ namespace HospitalProject.Controllers
             db.SaveChanges();
             return RedirectToAction("ListAdmin");
         }
-
+        //get update page of a specific blog
+        //GET: Update/id
+        public ActionResult Update(int id)
+        {
+            //find the blog in the db
+            Blog blog = db.Blogs.Find(id);
+            //display the update blog page
+            return View(blog);
+        }
+        //Post request to make changes to in the update page
+        [HttpPost]
+        public ActionResult Update(Blog blog)
+        {
+            var selectedBlog = db.Blogs.Single(b => b.Id == blog.Id);
+            //binding params
+            selectedBlog.Title = blog.Title;
+            selectedBlog.Body = blog.Body;
+            //change the db
+            db.SaveChanges();
+            //back to the List
+            return RedirectToAction("ListAdmin");
+        }
 
 
     }
