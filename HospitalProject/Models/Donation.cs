@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HospitalProject.Models
 {
-    public class Donation
+    public class Donation : IEnumerable
     {
         //donations information:
         //it stores the information of the donor and the amount as the gift
@@ -36,5 +37,9 @@ namespace HospitalProject.Models
         public string City { get; set; }
         public int ZipCode { get; set; }
 
+        public IEnumerator GetEnumerator()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
