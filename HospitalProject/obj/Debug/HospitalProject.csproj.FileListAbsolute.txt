@@ -588,8 +588,6 @@ C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\
 C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.csproj.CopyComplete
 C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.dll
 C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.pdb
-C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.Migrations.noti.resources
-C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.csproj.GenerateResource.cache
 C:\Users\elmir_ij1t0f1\Desktop\Test\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.noti.resources
 C:\Users\Balmeet\Documents\Hospital Project\HospitalProjectTeam2\HospitalProject\bin\HospitalProject.dll.config
 C:\Users\Balmeet\Documents\Hospital Project\HospitalProjectTeam2\HospitalProject\bin\HospitalProject.dll
@@ -753,3 +751,5 @@ C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\De
 C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.FixErrors.resources
 C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.pending.resources
 C:\Users\elmir_ij1t0f1\Desktop\255AM\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.ChangeZipcodeType.resources
+C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.Migrations.fix.resources
+C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.csproj.GenerateResource.cache
