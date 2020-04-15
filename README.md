@@ -58,3 +58,40 @@
       - Controller
         - FeedbacksController
         - DepartmentsController
+        
+## Elmira Alif (n01318198)
+1. ### MVP feature 
+    #### Progress
+      - Models
+        - Blog.cs
+      - Views
+        - Home (Index): Design and stylesheet 
+        - Shared/_Layout: Master Layout
+        - Blogs/List : List the blogs to the user
+        - Blogs/ListAdmin: List blogs to be managed by the admin
+        - Blogs/Add : Add a new blog by the admin
+        - Blogs/Update: Update the blog post by the admin
+        - Blogs/ConfirmDelete: confirmation to delete by the admin
+      - Controllers
+        - BlogsController
+2. ### Donation feature 
+    #### Progress
+    - Models
+        - Donation.cs
+        - Designation.cs
+        - Province.cs
+        - ViewModels
+            - NewDonationViewModel.cs
+    - Views
+        - Donations/Add : To fill out the form of donation
+        - Donation/List: List all the donations made 
+        - Donation/Show: Details of the donation
+        - Donation/Update: To update the personal infromation on the form
+        - Donation/ConfirmDelete: Confirmation to delete
+    - Controllers
+        - DonationsController
+        
+        
+        
+     
+        
