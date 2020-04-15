@@ -3,7 +3,7 @@ namespace HospitalProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class noti : DbMigration
+    public partial class fix : DbMigration
     {
         public override void Up()
         {
@@ -38,32 +38,43 @@ namespace HospitalProject.Migrations
                 .PrimaryKey(t => t.typeId);
             
             CreateTable(
+                "dbo.Designations",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Title = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Donations",
                 c => new
                     {
-                        DonationId = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         Amount = c.Int(nullable: false),
-                        DonorId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.DonationId)
-                .ForeignKey("dbo.Donors", t => t.DonorId, cascadeDelete: true)
-                .Index(t => t.DonorId);
-            
-            CreateTable(
-                "dbo.Donors",
-                c => new
-                    {
-                        DonorId = c.Int(nullable: false, identity: true),
-                        FName = c.String(),
-                        LName = c.String(),
+                        FirstName = c.String(),
+                        LastName = c.String(),
                         Email = c.String(),
                         Phone = c.String(),
-                        Street = c.String(),
+                        DesignationId = c.Int(nullable: false),
+                        ProvinceId = c.Int(nullable: false),
                         City = c.String(),
-                        Province = c.String(),
-                        PCode = c.String(),
+                        ZipCode = c.String(),
                     })
-                .PrimaryKey(t => t.DonorId);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Designations", t => t.DesignationId, cascadeDelete: true)
+                .ForeignKey("dbo.Provinces", t => t.ProvinceId, cascadeDelete: true)
+                .Index(t => t.DesignationId)
+                .Index(t => t.ProvinceId);
+            
+            CreateTable(
+                "dbo.Provinces",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Initials = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Feedbacks",
@@ -135,21 +146,24 @@ namespace HospitalProject.Migrations
         {
             DropForeignKey("dbo.Notifications", "typeId", "dbo.NotificationTypes");
             DropForeignKey("dbo.Feedbacks", "typeId", "dbo.FeedbackTypes");
-            DropForeignKey("dbo.Donations", "DonorId", "dbo.Donors");
+            DropForeignKey("dbo.Donations", "ProvinceId", "dbo.Provinces");
+            DropForeignKey("dbo.Donations", "DesignationId", "dbo.Designations");
             DropForeignKey("dbo.FeedbackTypesDepartments", "Departments_id", "dbo.Departments");
             DropForeignKey("dbo.FeedbackTypesDepartments", "FeedbackTypes_typeId", "dbo.FeedbackTypes");
             DropIndex("dbo.FeedbackTypesDepartments", new[] { "Departments_id" });
             DropIndex("dbo.FeedbackTypesDepartments", new[] { "FeedbackTypes_typeId" });
             DropIndex("dbo.Notifications", new[] { "typeId" });
             DropIndex("dbo.Feedbacks", new[] { "typeId" });
-            DropIndex("dbo.Donations", new[] { "DonorId" });
+            DropIndex("dbo.Donations", new[] { "ProvinceId" });
+            DropIndex("dbo.Donations", new[] { "DesignationId" });
             DropTable("dbo.FeedbackTypesDepartments");
             DropTable("dbo.NotificationTypes");
             DropTable("dbo.Notifications");
             DropTable("dbo.Jobs");
             DropTable("dbo.Feedbacks");
-            DropTable("dbo.Donors");
+            DropTable("dbo.Provinces");
             DropTable("dbo.Donations");
+            DropTable("dbo.Designations");
             DropTable("dbo.FeedbackTypes");
             DropTable("dbo.Departments");
             DropTable("dbo.Blogs");

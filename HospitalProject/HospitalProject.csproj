@@ -169,31 +169,21 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\DonationsController.cs" />
     <Compile Include="Controllers\FeedbacksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Data\HospitalContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004131538025_noti.cs" />
-    <Compile Include="Migrations\202004131538025_noti.Designer.cs">
-      <DependentUpon>202004131538025_noti.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004140704397_FixErrors.cs" />
-    <Compile Include="Migrations\202004140704397_FixErrors.Designer.cs">
-      <DependentUpon>202004140704397_FixErrors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004140710485_pending.cs" />
-    <Compile Include="Migrations\202004140710485_pending.Designer.cs">
-      <DependentUpon>202004140710485_pending.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004141221200_ChangeZipcodeType.cs" />
-    <Compile Include="Migrations\202004141221200_ChangeZipcodeType.Designer.cs">
-      <DependentUpon>202004141221200_ChangeZipcodeType.cs</DependentUpon>
+    <Compile Include="Migrations\202004141814160_fix.cs" />
+    <Compile Include="Migrations\202004141814160_fix.Designer.cs">
+      <DependentUpon>202004141814160_fix.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -210,7 +200,10 @@
     <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\NotificationTypes.cs" />
     <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\ViewModels\AddDepartment.cs" />
     <Compile Include="Models\ViewModels\NewDonationViewModel.cs" />
+    <Compile Include="Models\ViewModels\ShowDepartment.cs" />
+    <Compile Include="Models\ViewModels\ShowFeedbackType.cs" />
     <Compile Include="Models\ViewModels\UpdateFeedback.cs" />
     <Compile Include="Models\ViewModels\UpdateNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -431,6 +424,9 @@
     <Content Include="Views\Donations\ConfirmDelete.cshtml" />
     <Content Include="Views\Donations\Update.cshtml" />
     <Content Include="Views\Donations\Message.cshtml" />
+    <Content Include="Views\Feedbacks\ShowType.cshtml" />
+    <Content Include="Views\Feedbacks\AddDepartment.cshtml" />
+    <Content Include="Views\Departments\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -444,17 +440,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004131538025_noti.resx">
-      <DependentUpon>202004131538025_noti.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004140704397_FixErrors.resx">
-      <DependentUpon>202004140704397_FixErrors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004140710485_pending.resx">
-      <DependentUpon>202004140710485_pending.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004141221200_ChangeZipcodeType.resx">
-      <DependentUpon>202004141221200_ChangeZipcodeType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004141814160_fix.resx">
+      <DependentUpon>202004141814160_fix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
