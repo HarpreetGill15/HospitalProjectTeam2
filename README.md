@@ -146,7 +146,7 @@
       - Controller
         - JobController
         - ApplicationsController
-2. ### Feedbacks Feature
+2. ### FAQ Feature
     #### Progress
       - Models
         - FrequentlyAskedQUestion
