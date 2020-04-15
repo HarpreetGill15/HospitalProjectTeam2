@@ -62,6 +62,8 @@ namespace HospitalProject.Controllers
         {
             if (active == null)
             {
+                Debug.WriteLine("adding notification with the  heading of " + headline + " content " + content + " type is " + type + " active is " + active);
+
                 string query = "insert into Notifications (headline, content, typeId) values (@headline, @content, @type)";
 
                 SqlParameter[] parameters = new SqlParameter[3];
@@ -76,6 +78,8 @@ namespace HospitalProject.Controllers
             }
             else
             {
+                Debug.WriteLine("adding notification with the  heading of " + headline + " content " + content + " type is " + type + " active is " + active);
+
                 string query = "insert into Notifications (headline, content, typeId, active) values (@headline, @content, @type, @active)";
 
                 SqlParameter[] parameters = new SqlParameter[4];
@@ -93,6 +97,8 @@ namespace HospitalProject.Controllers
         //delete notificaiton
         public ActionResult Delete(int id)
         {
+            Debug.WriteLine("deleting notification with the id of "+id);
+
             string query = "delete from Notifications where id = @id";
 
             SqlParameter parameter = new SqlParameter("@id", id);
