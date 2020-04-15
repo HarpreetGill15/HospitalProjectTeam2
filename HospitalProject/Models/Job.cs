@@ -6,6 +6,7 @@ using System.Web;
 
 namespace HospitalProject.Models
 {
+    //Model for Jobs
     public class Job
     {
         [Key]

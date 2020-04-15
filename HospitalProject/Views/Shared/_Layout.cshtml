@@ -10,10 +10,14 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/src/Admin.js" type="text/javascript"></script>
     @Styles.Render("~/Content/css")
 </head>
 
 <body>
+    <form method="post" action="/Job/ListJobsAdmin" id="admin" onsubmit="return loginCheck()">
+        <input type="submit" value="Admin" />
+    </form>
     <header class="container-fluid">
         <nav class="navbar navbar-light container">
             <a class="navbar-brand"><img class="img-fluid" src="@Url.Content("~/Content/images/Logo.png")" alt="Logo Image, Link to the home page"></a>
@@ -37,8 +41,9 @@
                 <a class="nav-item nav-link" href="#">ABOUT</a>
                 <a class="nav-item nav-link" href="@Url.Action("List", "Patients")">PATIENTS</a>
                 <a class="nav-item nav-link" href="#">SERVICES</a>
-                <a class="nav-item nav-link" href="#">CAREERS</a>
+                <a class="nav-item nav-link" href="/Job/ListJobs">CAREERS</a>
                 <a class="nav-item nav-link" href="@Url.Action("List", "Blogs")">NEWS</a>
+                <a class="nav-item nav-link" href="/FrequentlyAskedQuestion/ListFAQ">FAQ</a>
             </div>
 
         </div>

@@ -1,43 +1,35 @@
-﻿@model HospitalProject.Models.Job
+﻿@model HospitalProject.Models.ViewModels.JobApplications
 @{
     ViewBag.Title = "ShowJob";
 }
+    @*This page displays the details of a specific job*@
+    <section class="jobMain">
+        <h2>Job Details</h2>
+        @*Below code will display details about the Job.*@
+        <table class="table table-bordered  table-hover">
+            <tr>
+                <td>Name:</td>
+                <td>@Model.job.name</td>
+            </tr>
+            <tr>
+                <td>Skill:</td>
+                <td>@Model.job.skill</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>@Model.job.description</td>
+            </tr>
+            <tr>
+                <td>Type:</td>
+                <td>@Model.job.type</td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td>@Model.job.salary</td>
+            </tr>
+        </table>
 
-<section class="container py-5">
-
-    <h2>ShowJob</h2>
-
-    <h2>Job Details</h2>
-    @*Below code will display details about the Job.*@
-    <div class="row">
-        <div class="col-sm">
-            <div class="form-group">
-                <div class="form-group row">
-                    <span>Name:</span>
-                    <span>@Model.name</span>
-                </div>
-                <div class="form-group row">
-                    <span>Skill:</span>
-                    <span>@Model.skill</span>
-                </div>
-                <div class="form-group row">
-                    <span>description:</span>
-                    <span>@Model.description</span>
-                </div>
-                <div class="form-group row">
-                    <span>Description:</span>
-                    <span>@Model.type</span>
-                </div>
-                <div class="form-group row">
-                    <span>Salary:</span>
-                    <span>@Model.salary</span>
-                </div>
-            </div>
-            @*Link styled as buttons to go back to the list page, Update the details and to delete the record*@
-            <a href="/Job/JobList/" class="btn btn-default">Back</a>
-            <a href="/Job/UpdateJob/@Model.jobId" class="btn btn-warning">Update</a>
-            <a href="/Job/DeleteJob/@Model.jobId" onclick="return validate();" class="btn btn-danger">Delete</a>
-        </div>
-    </div>
-</section>
-<hr/>
+        @*Link styled as buttons to go back to the list page abd to Apply for this job.*@
+        <a href="/Job/ListJobs/" class="btn btn-secondary">Back</a>
+        <a href="/Job/ApplyJob/@Model.job.jobId" class="btn btn-primary">Apply</a>
+    </section>

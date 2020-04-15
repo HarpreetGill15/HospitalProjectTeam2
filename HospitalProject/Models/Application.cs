@@ -7,6 +7,7 @@ using System.Web;
 
 namespace HospitalProject.Models
 {
+    //Model for Applications. This class has JobId as the Foreign Key
     public class Application
     {
         [Key]
@@ -16,6 +17,7 @@ namespace HospitalProject.Models
         public string lastName { get; set; }
         public string emailId { get; set; }
         public string coverLetter { get; set; }
+        public string resume { get; set; }
 
         public int JobId { get; set; }
         [ForeignKey("JobId")]

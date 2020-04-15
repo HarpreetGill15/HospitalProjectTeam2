@@ -164,3 +164,13 @@ footer {
 .d-form {
     padding: 0 15%;
 }
+
+.jobMain {
+    margin: 0 auto;
+    width: 90%;
+    padding: 5%;
+}
+
+#admin {
+    float: right;
+}

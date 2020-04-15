@@ -22,5 +22,7 @@ namespace HospitalProject.Data
         public System.Data.Entity.DbSet<HospitalProject.Models.Donation> Donations { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Province> Provinces { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Job> Jobs { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Application> Applications { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.FrequentlyAskedQuestion> FrequentlyAskedQuestions { get; set; }
     }
 }
