@@ -297,16 +297,29 @@ namespace HospitalProject.Controllers
             Debug.WriteLine("Entered ListJobs..");
             Debug.WriteLine("Entered Search key is" + searchKey);
 
-            //Query to get the list of jobs
-            string query = "select * from jobs";
-
-            if (searchKey != null)
+            //SQL Query to get the list of jobs
+            //string query = "select * from jobs";
+            //if (searchKey != null)
+            //{
+            //  query = query + " where name like '%" + searchKey + "%'";
+            //}
+            //List<Job> jobs = db.Jobs.SqlQuery(query).ToList();
+            
+            //LINQ Query to get the list of jobs
+            if (searchKey!=null && searchKey!="")
             {
-                query = query + " where name like '%" + searchKey + "%'";
-
+                List<Job> jobs = db.Jobs
+                    .Where(jobs => 
+                        jobs.name.Contains(searchKey) 
+                    )
+                    .ToList();
+                return View(jobs);
             }
-
-            List<Job> jobs = db.Jobs.SqlQuery(query).ToList();
+            else
+            {
+                List<Job> jobs = db.Jobs.ToList();
+                return View(jobs);
+            }
 
             /****************************************************************************************************************************************************
                 Pagination code cited from below source: 
