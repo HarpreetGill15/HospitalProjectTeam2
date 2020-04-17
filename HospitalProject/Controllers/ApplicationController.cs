@@ -29,19 +29,31 @@ namespace HospitalProject.Controllers
             Debug.WriteLine("Entered ApplicationList..");
             Debug.WriteLine("Entered Search key is" + searchKey);
 
-            //Query to get the list of applications from the Applications table
-            string query = "select * from Applications";
+//             //Query to get the list of applications from the Applications table
+//             string query = "select * from Applications";
 
-            //Code to implement Search Box feature
-            if (searchKey != null)
+//             //Code to implement Search Box feature
+//             if (searchKey != null)
+//             {
+//                 query = query + " where firstName like '%" + searchKey + "%' OR lastName like '%" + searchKey + "%' ";
+
+//             }
+//             //executing the above query
+//             List<Application> applications = db.Applications.SqlQuery(query).ToList();
+
+            
+            if (searchKey!=null && searchKey!="")
             {
-                query = query + " where firstName like '%" + searchKey + "%' OR lastName like '%" + searchKey + "%' ";
-
+                List<Application> applications = db.Applications
+                    .Where(applications => 
+                        application.name.Contains(searchKey) 
+                    )
+                    .ToList();
             }
-            //executing the above query
-            List<Application> applications = db.Applications.SqlQuery(query).ToList();
-
-
+            else
+            {
+                List<Application> applications = db.Applications.ToList();
+            }
 
             /****************************************************************************************************************************************************
              Pagination code cited from below source: 
