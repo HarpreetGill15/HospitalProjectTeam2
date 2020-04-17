@@ -27,15 +27,28 @@ namespace HospitalProject.Controllers
             Debug.WriteLine("Entered ListFAQs..");
             Debug.WriteLine("Entered Search key is" + searchKey);
 
-            //Query to get the list of FAQs
-            string query = "select * from FrequentlyAskedQuestions";
+            //SQL Query to get the list of FAQs
+            //string query = "select * from FrequentlyAskedQuestions";
 
-            if (searchKey != null)
+            //if (searchKey != null)
+            //{
+            //    query = query + " where Category like '%" + searchKey + "%'";
+            //}
+            //List<FrequentlyAskedQuestion> FAQ = db.FrequentlyAskedQuestions.SqlQuery(query).ToList();
+            
+            //LINQ Query to get the list of FAQs
+            if (searchKey!=null && searchKey!="")
             {
-                query = query + " where Category like '%" + searchKey + "%'";
-
+                List<FrequentlyAskedQuestion> FAQ = db.FrequentlyAskedQuestions
+                    .Where(FAQ => 
+                        FAQ.name.Contains(searchKey) 
+                    )
+                    .ToList();
             }
-            List<FrequentlyAskedQuestion> FAQ = db.FrequentlyAskedQuestions.SqlQuery(query).ToList();
+            else
+            {
+                List<FrequentlyAskedQuestion> FAQ = db.FrequentlyAskedQuestions.ToList();
+            }
 
             /****************************************************************************************************************************************************
              Pagination code cited from below source: 
