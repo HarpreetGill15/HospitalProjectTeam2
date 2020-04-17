@@ -12,6 +12,20 @@ namespace HospitalProject.Data
         {
 
         }
+        /// <summary>
+        /// Table for reports (Annual Reports, By-Laws, ... )
+        /// </summary>
+        public DbSet<HospitalProject.Models.Report> Reports { get; set; }
+
+        /// <summary>
+        /// Table for publications (patients, visitors, ...) 
+        /// </summary>
+        public DbSet<HospitalProject.Models.Publication> Publications { get; set; }
+
+        /// <summary>
+        /// Table for files that are connected to reports (for instance: "General By-Law, March 2019" for report "By-Laws")
+        /// </summary>
+        public DbSet<HospitalProject.Models.ReportFile> ReportFiles { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Notifications> Notifications { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.NotificationTypes> NotificationTypes { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Feedbacks> Feedbacks { get; set; }

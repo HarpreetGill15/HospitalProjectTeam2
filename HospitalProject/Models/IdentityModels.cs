@@ -21,7 +21,7 @@ namespace HospitalProject.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("HospitalContext", throwIfV1Schema: false)
         {
         }
 
