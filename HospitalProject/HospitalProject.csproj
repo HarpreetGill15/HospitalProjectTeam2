@@ -179,6 +179,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Data\HospitalContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -222,6 +223,11 @@
     <Compile Include="Models\ViewModels\jobApplications.cs" />
     <Compile Include="Models\ViewModels\JobsApplications.cs" />
     <Compile Include="Models\ViewModels\NewDonationViewModel.cs" />
+    <Compile Include="Models\ViewModels\PublicationPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\PublicationShortViewModel.cs" />
+    <Compile Include="Models\ViewModels\PublicationViewModel.cs" />
+    <Compile Include="Models\ViewModels\ReportingPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\ReportViewModel.cs" />
     <Compile Include="Models\ViewModels\ShowDepartment.cs" />
     <Compile Include="Models\ViewModels\ShowFeedbackType.cs" />
     <Compile Include="Models\ViewModels\UpdateFeedback.cs" />
@@ -543,12 +549,14 @@
     <Content Include="Scripts\umd\popper.js.flow" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Views\Reports\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\resume\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\" />
+    <Folder Include="Views\NewFolder1\" />
     <Folder Include="Views\TinyMCE\" />
   </ItemGroup>
   <ItemGroup>

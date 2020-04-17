@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Public Reporting";
+}
+@model HospitalProject.Models.ViewModels.ReportingPageViewModel
+
+<div class="jumbotron">
+    <h1>Public Reporting</h1>
+</div>
+
+@if (Model.IsEditable)
+{
+    <h2>
+        @Html.ActionLink("Create new report", "CreateReport", "Home")
+    </h2>
+}
+
+
+<div class="row">
+
+    @foreach (var report in Model.Reports)
+    {
+        <div class="col-md-4">
+            <h2>
+                @Html.ActionLink(report.Title, "Index", "Reports", new { id = report.Id }, new { @class = "btn btn-lg" })
+            </h2>
+            <p>@report.Description</p>
+            @if (Model.IsEditable)
+            {
+                @Html.ActionLink("Edit", "Edit", "Reports", new { id = report.Id }, null)
+                @Html.Raw(" | ")
+                @Html.ActionLink("Delete", "Delete", "Reports", new { id = report.Id }, null)
+            }
+        </div>
+    }
+</div>
