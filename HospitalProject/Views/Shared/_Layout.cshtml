@@ -31,19 +31,22 @@
                 </div>
                 <a href="@Url.Action("Add", "Donations")" class="btn btn-primary">Donate Now!</a>
             </form>
+            @Html.Partial("_LoginPartial")
+
         </nav>
 
 
         <div class="container" id="main-menu">
 
+
             <div class="nav nav-pills nav-fill">
-                <a class="nav-item nav-link active" href="@Url.Action("Index", "Home")">HOME</a>
+                <a class='nav-item nav-link @(ViewBag.IsHome ?? false ? "active" : "")' href="@Url.Action("Index", "Home")">HOME</a>
                 <a class="nav-item nav-link" href="#">ABOUT</a>
                 <a class="nav-item nav-link" href="@Url.Action("List", "Patients")">PATIENTS</a>
                 <a class="nav-item nav-link" href="#">SERVICES</a>
                 <a class="nav-item nav-link" href="/Job/ListJobs">CAREERS</a>
                 <a class="nav-item nav-link" href="@Url.Action("List", "Blogs")">NEWS</a>
-                <a class="nav-item nav-link" href="@Url.Action("Index", "Reports")">PUBLIC REPORTING</a>
+                <a class='nav-item nav-link @(ViewBag.IsPublicReporting ?? false ? "active" : "") ' href="@Url.Action("Index", "Reports")">PUBLIC REPORTING</a>
                 <a class="nav-item nav-link" href="/FrequentlyAskedQuestion/ListFAQ">FAQ</a>
             </div>
 

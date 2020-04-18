@@ -12,6 +12,22 @@ namespace HospitalProject.Controllers
 {
     public class ReportsController : Controller
     {
+        public ActionResult Create()
+        {
+                if (!IsCurrentUserAdmin())
+                {
+                    return new HttpStatusCodeResult(System.Net.HttpStatusCode.Unauthorized);
+                }
+
+                return View();
+            
+        }
+
+        public ReportsController()
+        {
+            ViewBag.IsPublicReporting = true;
+        }
+
         /// <summary>
         /// Return if current user is administrator
         /// </summary>

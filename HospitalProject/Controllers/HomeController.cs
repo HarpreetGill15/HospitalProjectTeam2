@@ -8,6 +8,12 @@ namespace HospitalProject.Controllers
 {
     public class HomeController : Controller
     {
+
+        public HomeController()
+        {
+            ViewBag.IsHome = true;
+        }
+
         public ActionResult Index()
         {
             return View();
