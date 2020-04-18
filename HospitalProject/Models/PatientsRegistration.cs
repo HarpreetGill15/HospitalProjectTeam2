@@ -12,6 +12,7 @@ namespace HospitalProject.Models
         // A patient can be registered with following details
         //Firstname,Lastname,Email,Address,City,PostalCode,Gender,PhoneNumber,DOB,Emergency Contact Name,Emergency Number
         [Key]
+        public string id { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
         public string address { get; set; }

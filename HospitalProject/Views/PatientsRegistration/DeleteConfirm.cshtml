@@ -1,0 +1,18 @@
+﻿@model HospitalProject.Models.PatientsRegistration
+@{
+    ViewBag.Title = "DeleteConfirm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a href="/PatientsRegistration/List">Back</a>
+
+<!-- At first asking admin if he actually wants to delete patient record with name of patient-->
+<h2>Are You sure you want to delete patient record @Model.firstname @Model.lastname ?</h2>
+
+<div>
+    <a href="/PatientsRegistration/List/@Model.id">Cancel</a>
+</div>
+<form method="POST" action="/Artist/Delete/@Model.id">
+    <input type="submit" value="Confirm" />
+</form>
+

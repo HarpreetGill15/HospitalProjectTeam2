@@ -534,6 +534,9 @@
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Views\PatientsRegistration\Add.cshtml" />
+    <Content Include="Views\PatientsRegistration\Edit.cshtml" />
+    <Content Include="Views\PatientsRegistration\DeleteConfirm.cshtml" />
+    <Content Include="Views\PatientsRegistration\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
