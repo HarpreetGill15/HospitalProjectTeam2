@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace HospitalProject.Controllers
 {
-    public class PatientsController : Controller
+    public class PatientsRegistrationController : Controller
     {
         // GET: Patients
         public ActionResult Index()
@@ -14,6 +14,12 @@ namespace HospitalProject.Controllers
             return View();
         }
         public ActionResult List()
+        {
+            return View();
+        }
+       
+        [HttpPost]
+        public ActionResult Add ()
         {
             return View();
         }

@@ -833,3 +833,5 @@ C:\Users\Arun\Desktop\Final Project\Hospital Project\HospitalProject\obj\Debug\H
 C:\Users\Arun\Desktop\Final Project\Hospital Project\HospitalProject\obj\Debug\HospitalProject.pdb
 C:\Users\Arun\Desktop\Final Project\Hospital Project\HospitalProject\obj\Debug\HospitalProject.Migrations.JobsApplicationFAQAdded.resources
 C:\Users\harpr\Source\Repos\HospitalProjectTeam2Final\HospitalProject\obj\Debug\HospitalProject.Migrations.JobsApplicationFAQAdded.resources
+C:\Users\Balmeet\Documents\Hospital Project\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.fix.resources
+C:\Users\Balmeet\Documents\Hospital Project\HospitalProjectTeam2\HospitalProject\obj\Debug\HospitalProject.Migrations.JobsApplicationFAQAdded.resources
