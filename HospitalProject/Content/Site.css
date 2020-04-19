@@ -174,3 +174,39 @@ footer {
 #admin {
     float: right;
 }
+
+/*andriy ----*/
+.wrapper-and {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.textcenter {
+    text-align:center;
+}
+.inline-b {
+    display: inline-block
+}
+.margin-auto {
+    margin:10px auto;
+}
+.top20 {
+    margin-top: 20px;
+}
+#update-article-table {
+    margin: 20px 40%;
+    display: inline-block;
+    max-width: 400px;
+}
+/*Table*/
+table tr td {
+    padding: 10px;
+}
+/*Form*/
+form input, form textarea {
+    padding: 6px;
+}
+.grey-border {
+    border: 1px solid lightgrey;
+    padding:5px;
+    border-radius: 5px;
+}

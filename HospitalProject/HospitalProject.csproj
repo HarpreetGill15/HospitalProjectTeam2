@@ -179,6 +179,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
+    <Compile Include="Controllers\PublicationsController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Data\HospitalContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -551,13 +552,16 @@
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Views\Reports\Index.cshtml" />
     <Content Include="Views\Reports\Create.cshtml" />
+    <Content Include="Views\Reports\Edit.cshtml" />
+    <Content Include="Views\Publications\Index.cshtml" />
+    <Content Include="Views\Publications\Create.cshtml" />
+    <Content Include="Views\Publications\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\resume\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\" />
-    <Folder Include="Views\NewFolder1\" />
     <Folder Include="Views\TinyMCE\" />
   </ItemGroup>
   <ItemGroup>

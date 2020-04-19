@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Edit Report";
+}
+@model HospitalProject.Models.ViewModels.ReportViewModel
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Edit", "Reports", FormMethod.Post))
+{
+    <div id="update-article-table">
+        <table>
+            <tr>
+                <td>Title</td>
+                <td>@Html.TextBoxFor(m => m.Title)</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>@Html.TextAreaFor(m => m.Description)</td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Save" />
+    </div>
+}

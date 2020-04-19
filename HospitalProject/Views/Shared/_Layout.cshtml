@@ -42,7 +42,7 @@
             <div class="nav nav-pills nav-fill">
                 <a class='nav-item nav-link @(ViewBag.IsHome ?? false ? "active" : "")' href="@Url.Action("Index", "Home")">HOME</a>
                 <a class="nav-item nav-link" href="#">ABOUT</a>
-                <a class="nav-item nav-link" href="@Url.Action("List", "Patients")">PATIENTS</a>
+                <a class="nav-item nav-link @(ViewBag.IsPublications ?? false ? "active" : "")" href="@Url.Action("Index", "Publications")">PATIENTS &amp; VISITORS</a>
                 <a class="nav-item nav-link" href="#">SERVICES</a>
                 <a class="nav-item nav-link" href="/Job/ListJobs">CAREERS</a>
                 <a class="nav-item nav-link" href="@Url.Action("List", "Blogs")">NEWS</a>

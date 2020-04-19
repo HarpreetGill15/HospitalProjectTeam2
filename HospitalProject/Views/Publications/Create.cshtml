@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Create Page";
+}
+@model HospitalProject.Models.ViewModels.PublicationViewModel
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Create", "Publications", FormMethod.Post))
+{
+    <div id="update-article-table">
+        <table>
+            <tr>
+                <td>Title</td>
+                <td>@Html.TextBoxFor(m => m.Title)</td>
+            </tr>
+            <tr>
+                <td>Body</td>
+                <td>@Html.TextAreaFor(m => m.Body)</td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Create" />
+    </div>
+}
