@@ -16,11 +16,11 @@
 <div class="wrapper-and ">
 
 
-    <div class="d-flex justify-content-around">
+    <div class="d-flex justify-content-around ">
 
         @foreach (var report in Model.Reports)
         {
-            <div class="">
+            <div class="grey-border">
                 <h2>
                     @Html.ActionLink(report.Title, "Index", "Reports", new { id = report.Id }, new { @class = "btn btn-lg" })
                 </h2>
