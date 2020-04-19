@@ -8,17 +8,18 @@
 
 @using (Html.BeginForm("Edit", "Publications", FormMethod.Post))
 {
-    <div id="update-article-table">
-        <table>
-            <tr>
-                <td>Title</td>
-                <td>@Html.TextBoxFor(m => m.Title)</td>
-            </tr>
-            <tr>
-                <td>Body</td>
-                <td>@Html.TextAreaFor(m => m.Body)</td>
-            </tr>
-        </table>
-        <input type="submit" value="Save" />
-    </div>
+<div id="update-article-table">
+    <h2>Edit Publication</h2>
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>@Html.TextBoxFor(m => m.Title)</td>
+        </tr>
+        <tr>
+            <td>Body</td>
+            <td>@Html.TextAreaFor(m => m.Body)</td>
+        </tr>
+    </table>
+    <input type="submit" value="Save" />
+</div>
 }

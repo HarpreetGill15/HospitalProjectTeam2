@@ -7,18 +7,19 @@
 
 @using (Html.BeginForm("Create", "Reports", FormMethod.Post))
 {
-    <div id="update-article-table">
-        <table>
-            <tr>
-                <td>Title</td>
-                <td>@Html.TextBoxFor(m => m.Title)</td>
-            </tr>
-            <tr>
-                <td>Description</td>
-                <td>@Html.TextAreaFor(m => m.Description)</td>
-            </tr>
+<div id="update-article-table">
+    <h2>Create New Report</h2>
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>@Html.TextBoxFor(m => m.Title)</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>@Html.TextAreaFor(m => m.Description)</td>
+        </tr>
 
-        </table>
-        <input type="submit" value="Create" />
-    </div>
+    </table>
+    <input type="submit" value="Create" />
+</div>
 }
