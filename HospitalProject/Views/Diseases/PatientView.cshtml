@@ -1,0 +1,27 @@
+﻿@model List<HospitalProject.Models.Diseases>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Diseases</h2>
+<table class="table">
+    <!-- Displaying heading of table-->
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Content</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var diseases in Model)
+        {
+            <tr>
+                <!-- keeping firstname as link for admin to click on link and view detials of particular disease-->
+                <td>@diseases.DiseaseName</td>
+                <td>@diseases.Content</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+﻿@model List<HospitalProject.Models.Diseases>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Diseases</h2>
+<div>
+    <a href="/Diseases/Add" class="btn btn-primary stretched-link">Add New Disease</a>
+</div>
+<table class="table">
+    <!-- Displaying heading of table-->
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Content</th>
+            <th scope="col">Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var diseases in Model)
+        {
+            <tr>
+                <!-- keeping firstname as link for admin to click on link and view detials of particular disease-->
+                <td><a href="/Diseases/Show/@diseases.DiseaseID" class="btn btn-primary stretched-link">@diseases.DiseaseName</a></td>
+                <td>@diseases.Content</td>
+                <td>
+                    <a href="/Diseases/Edit/@diseases.DiseaseID" class="btn btn-primary stretched-link">Edit</a>
+                    <a href="/Diseases/DeleteConfirm/@diseases.DiseaseID" class=  "btn btn-primary stretched-link">Delete</a>
+                </td>
+            </tr>
+         }
+        </tbody>
+    </table>

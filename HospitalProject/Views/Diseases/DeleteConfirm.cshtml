@@ -1,0 +1,17 @@
+﻿@model HospitalProject.Models.Diseases
+@{
+    ViewBag.Title = "DeleteConfirm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a href="/Diseases/List" class="btn btn-primary stretched-link">Back</a>
+
+<h2>Are you sure you want to delete disease @Model.DiseaseName?</h2>
+<div>
+    <a href="/Diseases/List/@Model.DiseaseID">Cancel</a>
+</div>
+<form method="POST" action="/Disease/Delete/@Model.DiseaseID">
+    <input type="submit" value="Confirm" />
+</form>
+
+

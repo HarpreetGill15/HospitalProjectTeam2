@@ -1,0 +1,35 @@
+﻿@model List<HospitalProject.Models.Tips>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <a href="/Tips/Add" class="btn btn-primary stretched-link">Add New Tip</a>
+</div>
+<h2>List of Tips</h2>
+<table class="table">
+    <!-- Displaying heading of table-->
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Operation</th>
+        </tr>
+    </thead>
+    <!-- Displaying Tips content in table-->
+    <tbody>
+        @{
+            foreach (var tips in @Model)
+            { 
+                <tr>
+                    <td><a href="/Tips/Show/@tips.TipID" class="btn btn-primary stretched-link">@tips.TipName</a></td>
+                    <td>@tips.Date</td>
+                    <td><a href="/Tips/Edit/@tips.TipID" class="btn btn-primary stretched-link">Edit</a></td>
+                    <td><a href="/Tips/DeleteConfirm/@tips.TipID" class="btn btn-primary stretched-link">Delete</a></td>
+                </tr>          
+            }
+        }
+        </tbody>
+    </table>
+

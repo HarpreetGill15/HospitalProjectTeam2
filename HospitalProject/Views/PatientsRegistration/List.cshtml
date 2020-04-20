@@ -5,6 +5,7 @@
 }
 
 <h2>Patients List</h2>
+
 <table class="table">
     <!-- Displaying heading of table-->
     <thead>
@@ -20,7 +21,7 @@
         <tbody>
             <tr>
                 <!-- keeping firstname as link for admin to click on link and view detials of particular person-->
-                <td><a href="/PatientsRegistration/Show/@patients.id">@patients.firstname</a></td>
+                <td><a href="/PatientsRegistration/Show/@patients.id" class="btn btn-primary stretched-link">@patients.firstname</a></td>
                 <td>@patients.email</td>
                 <td>
                     <a href="/PatientsRegistration/Edit/@patients.id" class="btn btn-primary stretched-link">Edit</a>

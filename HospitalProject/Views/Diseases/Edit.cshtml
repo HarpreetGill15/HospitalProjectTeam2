@@ -1,0 +1,42 @@
+﻿@model HospitalProject.Models.ViewModels.EditDisease
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Details of Disease @Model.Diseases.DiseaseName</h2>
+<div>
+    <a href="/Diseases/List" class="btn btn-primary stretched-link">Back</a>
+</div>
+
+<form method="post" action="/Diseases/Edit/@Model.Diseases.DiseaseID" enctype="multipart/form-data">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Disease Name:</label>
+            <input type="text" name="diseasename" class="form-control" value="@Model.Diseases.DiseaseName" />
+        </div>
+        <div class="form-group col-md-4">
+            <label>Content:</label>
+            <input type="text" name="content" class="form-control" value="@Model.Diseases.Content" />
+        </div>
+    </div>
+    <div class="form-row">
+        <label>Tips:</label>
+        <select id="DiseasesTipsID" name="TipsID">
+            @foreach (var Tips in Model.Tips)
+            {
+                var selected = "";
+                if (Model.Diseases.DiseaseID == Tips.TipID)
+                {
+                    selected = "selected";
+                }
+                <option value="@Tips.TipID" @selected>@Tips.TipName</option>
+            }
+        </select>
+    </div>
+
+    <input type="submit" value="Edit Disease" class="btn btn-primary" />
+</form>
+    
+
+

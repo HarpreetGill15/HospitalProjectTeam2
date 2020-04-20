@@ -1,0 +1,20 @@
+﻿@model HospitalProject.Models.Tips
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Details of Tips @Model.TipName</h2>
+<div>
+    <a href="/Tips/List" class="btn btn-primary stretched-link">Back</a>
+</div>
+
+<form method="post" action="/Tips/Edit/@Model.TipID">
+    <input type="text" id="TipName" name="tipname" value="@Model.TipName" />
+    <input type="text" id="TipDate" name="tipdate" value="@Model.Date" />
+    <input type="submit" value="Edit Tips" />
+</form>
+
+
+

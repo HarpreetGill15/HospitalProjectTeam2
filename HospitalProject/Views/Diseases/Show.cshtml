@@ -1,0 +1,20 @@
+﻿@model HospitalProject.Models.ViewModels.ShowDisease
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show Details of Disease @Model.Diseases.DiseaseName</h2>
+
+<a  href="/Diseases/List" class="btn btn-primary stretched-link">Back</a>
+<a  href="/Diseases/Edit/@Model.Diseases.DiseaseID" class="btn btn-primary stretched-link">Edit</a>
+
+<div>
+    <p>Disease Name : </p>@Model.Diseases.DiseaseName
+    <p>Content:</p>@Model.Diseases.Content
+    <p>Tips:</p>@Model.Diseases.Tips.TipName
+</div>
+<div>
+    <a href="/Tips/Add" class="btn btn-primary stretched-link">Add Tip</a>
+</div>
+

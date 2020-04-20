@@ -1,0 +1,16 @@
+﻿@model HospitalProject.Models.Tips
+@{
+    ViewBag.Title = "DeleteConfirm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a href="/Tips/List" class="btn btn-primary stretched-link">Back</a>
+
+<!-- Asking for confirmation before deleting a tip name-->
+<h2>Are you sure you want to delete tip  @Model.TipName ?</h2>
+<div>
+    <a href="/Tips/List/@Model.TipID" class="btn btn-primary stretched-link">Cancel</a>
+</div>
+<form method="POST" action="/Tips/Delete/@Model.TipID">
+    <input type="submit" value="Confirm" />
+</form>
+

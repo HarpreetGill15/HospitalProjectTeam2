@@ -171,6 +171,7 @@
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
     <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\DiseasesController.cs" />
     <Compile Include="Controllers\DonationsController.cs" />
     <Compile Include="Controllers\FeedbacksController.cs" />
     <Compile Include="Controllers\FrequentlyAskedQuestionController.cs" />
@@ -179,6 +180,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\PatientsRegistrationController.cs" />
+    <Compile Include="Controllers\TipsController.cs" />
     <Compile Include="Data\HospitalContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,12 +210,16 @@
     <Compile Include="Models\NotificationTypes.cs" />
     <Compile Include="Models\PatientsRegistration.cs" />
     <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\Tips.cs" />
+    <Compile Include="Models\Diseases.cs" />
     <Compile Include="Models\ViewModels\AddDepartment.cs" />
     <Compile Include="Models\ViewModels\jobApplications.cs" />
     <Compile Include="Models\ViewModels\JobsApplications.cs" />
     <Compile Include="Models\ViewModels\NewDonationViewModel.cs" />
     <Compile Include="Models\ViewModels\ShowDepartment.cs" />
+    <Compile Include="Models\ViewModels\ShowDisease.cs" />
     <Compile Include="Models\ViewModels\ShowFeedbackType.cs" />
+    <Compile Include="Models\ViewModels\EditDisease.cs" />
     <Compile Include="Models\ViewModels\UpdateFeedback.cs" />
     <Compile Include="Models\ViewModels\UpdateNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -537,6 +543,17 @@
     <Content Include="Views\PatientsRegistration\Edit.cshtml" />
     <Content Include="Views\PatientsRegistration\DeleteConfirm.cshtml" />
     <Content Include="Views\PatientsRegistration\Show.cshtml" />
+    <Content Include="Views\Tips\Add.cshtml" />
+    <Content Include="Views\Tips\DeleteConfirm.cshtml" />
+    <Content Include="Views\Tips\List.cshtml" />
+    <Content Include="Views\Tips\Show.cshtml" />
+    <Content Include="Views\Tips\Edit.cshtml" />
+    <Content Include="Views\Diseases\List.cshtml" />
+    <Content Include="Views\Diseases\Add.cshtml" />
+    <Content Include="Views\Diseases\DeleteConfirm.cshtml" />
+    <Content Include="Views\Diseases\Show.cshtml" />
+    <Content Include="Views\Diseases\Edit.cshtml" />
+    <Content Include="Views\Diseases\PatientView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

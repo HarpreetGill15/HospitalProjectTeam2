@@ -1,0 +1,17 @@
+﻿@model HospitalProject.Models.Tips
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Details of Tip @Model.TipName</h2>
+<div>
+    <a  href="/Tips/List" class="btn btn-primary stretched-link">Back</a>
+    <a  href="/Tips/Edit/@Model.TipID" class="btn btn-primary stretched-link">Edit</a>
+</div>
+<div>
+    <p>Name : </p>@Model.TipName
+    <p>Date:</p>@Model.Date
+</div>
+

@@ -24,7 +24,10 @@ namespace HospitalProject.Data
         public System.Data.Entity.DbSet<HospitalProject.Models.Job> Jobs { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.Application> Applications { get; set; }
         public System.Data.Entity.DbSet<HospitalProject.Models.FrequentlyAskedQuestion> FrequentlyAskedQuestions { get; set; }
-
         public System.Data.Entity.DbSet<HospitalProject.Models.PatientsRegistration> PatientsRegistration { get; set; }
+
+        public System.Data.Entity.DbSet<HospitalProject.Models.Tips> Tips { get; set; }
+        public System.Data.Entity.DbSet<HospitalProject.Models.Diseases> Diseases { get; set; }
+
     }
 }
