@@ -166,19 +166,30 @@
       - Controller
         - FrequentlyAskedQuestionControllerr
         
+        
+        
+        
         BalmeetKaur(N01360420)
+        
         Progress
+        
         1.) Patient Registration System
+        
         Models
-             PatientsRegistration.cs 
+              
+                PatientsRegistration.cs
         Views
-             PatientsRegistration
+              
+              PatientsRegistration
+               
                                   Add.cshtml = patients can add his details by filling out a form
                                   DeleteConfirm.cshtml = Admin can delete records of patient
                                   Edit.cshtml = Admin can edit records of a particular patient
                                   List.cshtml = Admin can view lists of all patients in a system
                                   Show.cshtml = admin can view details of a particular patient
-        Controller
+       
+       Controller
+        
                  PatientsRegistrationController.cs
                  
        2.) Tips and Advices for Diseases
