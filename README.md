@@ -166,5 +166,43 @@
       - Controller
         - FrequentlyAskedQuestionControllerr
         
+        BalmeetKaur(N01360420)
+        Progress
+        1.) Patient Registration System
+        Models
+             PatientsRegistration.cs 
+        Views
+             PatientsRegistration
+                                  Add.cshtml = patients can add his details by filling out a form
+                                  DeleteConfirm.cshtml = Admin can delete records of patient
+                                  Edit.cshtml = Admin can edit records of a particular patient
+                                  List.cshtml = Admin can view lists of all patients in a system
+                                  Show.cshtml = admin can view details of a particular patient
+        Controller
+                 PatientsRegistrationController.cs
+                 
+       2.) Tips and Advices for Diseases
+       Models
+             Diseases.cs
+             Tips.cs
+       ViewModels
+                 EditDisease.cs
+                 ShowDisease.cs
+       Views
+            Diseases
+                    Add.cshtml = admin can diseases  by filling out a form
+                    DeleteConfirm.cshtml = Admin can delete details of disease
+                    Edit.cshtml = Admin can edit details of a particular disease
+                    List.cshtml = Admin can view lists of all diseases in a system
+                    Show.cshtml = admin can view details of a particular disease
+                    PatientView.cshtml = patients can view tips and advices for diseases
+           Tips
+               Add.cshtml = admin can add tips for diseases
+               DeleteConfirm.cshtml = admin can delete a particular tip
+               Edit.cshtml = admin can edit details of tips
+               List.cshtml = admin can view list of all tips
+               Show.cshtml = admin can view content of particular tip
+                    
+        
      
         
