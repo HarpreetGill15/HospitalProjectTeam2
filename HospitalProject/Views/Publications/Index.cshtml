@@ -12,11 +12,11 @@
     </h2>
 }
 
-<div class="wrapper-and margin-auto container ">
-    <div class=" row">
+<div class="wrapper-and margin-auto container  ">
+    <div class=" d-flex justify-content-center ">
         @if (Model.Publication != null)
         {
-            <div class="margin-auto grey-border textcenter">
+            <div class="margin-auto grey-border textcenter inline-b ">
                 <h2>@Model.Publication.Title</h2>
                 <p>@Model.Publication.Body</p>
 
@@ -29,24 +29,24 @@
 
             </div>
         }
+
+        @foreach (var publication in Model.Children)
+        {
+            <div class="inline-b  margin-auto grey-border textcenter">
+
+                <h2>
+                    <p>@Html.ActionLink(publication.Title, "Index", "Publications", new { id = publication.Id }, new { @class = "btn btn-lg" })</p>
+                </h2>
+
+                @if (Model.IsEditable)
+                {
+                    @Html.ActionLink("Edit", "Edit", "Publications", new { id = publication.Id }, null)
+                    @Html.Raw(" | ")
+                    @Html.ActionLink("Delete", "Delete", "Publications", new { id = publication.Id }, null)
+                }
+            </div>
+        }
     </div>
-
-    @foreach (var publication in Model.Children)
-    {
-        <div class="inline-b  margin-auto grey-border textcenter">
-
-            <h2>
-                <p>@Html.ActionLink(publication.Title, "Index", "Publications", new { id = publication.Id }, new { @class = "btn btn-lg" })</p>
-            </h2>
-
-            @if (Model.IsEditable)
-            {
-                @Html.ActionLink("Edit", "Edit", "Publications", new { id = publication.Id }, null)
-                @Html.Raw(" | ")
-                @Html.ActionLink("Delete", "Delete", "Publications", new { id = publication.Id }, null)
-            }
-        </div>
-    }
 
 
     @if (Model.Publication != null)
