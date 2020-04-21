@@ -13,12 +13,14 @@
 }
 
 <div class="wrapper-and margin-auto container  ">
-    <div class=" d-flex justify-content-center ">
+
+    <div class="  row ">
         @if (Model.Publication != null)
         {
-            <div class="margin-auto grey-border textcenter inline-b ">
+            <div class="margin-auto grey-border textcenter inline-b col-12 ">
                 <h2>@Model.Publication.Title</h2>
                 <p>@Model.Publication.Body</p>
+
 
                 @if (Model.IsEditable)
                 {
@@ -29,10 +31,13 @@
 
             </div>
         }
+    </div>
+
+    <div class="  row ">
 
         @foreach (var publication in Model.Children)
         {
-            <div class="inline-b  margin-auto grey-border textcenter">
+            <div class="inline-b  margin-auto grey-border textcenter col-12-sm col-6-md col-4-lg">
 
                 <h2>
                     <p>@Html.ActionLink(publication.Title, "Index", "Publications", new { id = publication.Id }, new { @class = "btn btn-lg" })</p>
@@ -48,21 +53,24 @@
         }
     </div>
 
+    <div class="row">
 
-    @if (Model.Publication != null)
-    {
-        <div class="row">
-            <p>
-                @if (Model.Publication.ParentId == null)
-                {
-                    @Html.ActionLink("Back", "Index", "Publications", new { id = (int?)null }, new { @class = "btn btn-lg btn-primary" })
-                }
-                else
-                {
-                    @Html.ActionLink("Back", "Index", "Publications", new { id = Model.Publication.ParentId }, new { @class = "btn btn-lg btn-primary" })
-                }
-            </p>
-        </div>
-    }
+        @if (Model.Publication != null)
+        {
+            <div class="col-12-sm col-6-md col-4-lg">
+                <p>
+                    @if (Model.Publication.ParentId == null)
+                    {
+                        @Html.ActionLink("Back", "Index", "Publications", new { id = (int?)null }, new { @class = "btn btn-lg btn-primary" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Back", "Index", "Publications", new { id = Model.Publication.ParentId }, new { @class = "btn btn-lg btn-primary" })
+                    }
+                </p>
+            </div>
+        }
 
-</div> @*close row  *@
+    </div>
+
+    </div> @*close container  *@
